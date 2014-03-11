@@ -1,0 +1,29 @@
+#
+# ~/.gitconfig
+#
+
+[user]
+	name = Jonah Bernhard
+	email = jonah.bernhard@gmail.com
+[core]
+	editor = vim
+[merge]
+	tool = gvimdiff
+[color]
+	ui = true
+[alias]
+	c = commit
+	s = status
+	b = branch
+	d = diff
+	a = add
+	ch = checkout
+	l = log
+	dc = diff --cached
+	h = help
+[grep]
+	lineNumber = true
+[push]
+	default = simple
+[github]
+	user = jbernhard

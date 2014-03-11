@@ -1,0 +1,15 @@
+#
+# ~/.config/locale.conf
+#
+
+# ensure that en_{US,GB}.UTF-8 are enabled in locale-gen
+
+# US english
+LANG="en_US.UTF-8"
+
+# UK style time and units
+LC_TIME="en_GB.UTF-8"
+LC_MEASUREMENT="en_GB.UTF-8"
+
+# standard sort order
+LC_COLLATE="C"

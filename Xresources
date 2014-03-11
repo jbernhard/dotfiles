@@ -1,0 +1,58 @@
+!
+! ~/.Xresources
+!
+
+
+! urxvt
+urxvt.title: urxvt
+urxvt.urgentOnBell: off
+urxvt.visualBell: off
+urxvt.depth: 32
+urxvt.iconFile: /usr/share/icons/oxygen/22x22/apps/utilities-terminal.png
+! urxvt.font -> set in .xinitrc
+urxvt.scrollBar: false
+urxvt.internalBorder: 2
+urxvt.externalBorder: 0
+urxvt.saveLines: 10000
+urxvt.perl-ext-common: default,matcher,clipboard
+urxvt.url-launcher: chromium
+urxvt.matcher.button: 1
+urxvt.clipboard.autocopy: true
+urxvt.keysym.M-c:   perl:clipboard:copy
+urxvt.keysym.M-v:   perl:clipboard:paste
+urxvt.keysym.M-S-v: perl:clipboard:paste_escaped
+
+
+! cursor
+Xcursor.theme: Neutral_Plus
+
+
+! fonts
+Xft.antialias:  1
+Xft.autohint:   0
+Xft.dpi:        96
+Xft.hinting:    1
+Xft.hintstyle:  hintfull
+Xft.lcdfilter:  lcddefault
+Xft.rgba:       rgb
+
+
+! terminal colors
+*background: black
+*foreground: white
+*color0:     rgb:00/00/00
+*color1:     rgb:a8/00/00
+*color2:     rgb:00/a8/00
+*color3:     rgb:a8/54/00
+*color4:     rgb:00/00/a8
+*color5:     rgb:a8/00/a8
+*color6:     rgb:00/a8/a8
+*color7:     rgb:a8/a8/a8
+*color8:     rgb:54/50/54
+*color9:     rgb:f8/54/50
+*color10:    rgb:50/fc/50
+*color11:    rgb:f8/fc/50
+*color12:    rgb:50/54/f8
+*color13:    rgb:f8/54/f8
+*color14:    rgb:50/fc/f8
+*color15:    rgb:f8/fc/f8
