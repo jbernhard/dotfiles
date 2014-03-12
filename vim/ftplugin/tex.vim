@@ -38,7 +38,7 @@ let g:Tex_CompileRule_pdf	= 'pdflatex -interaction nonstopmode -synctex=1 -shell
 
 " compile & view shortcuts
 "no <F12> :w<CR>:call Tex_RunLaTeX()<CR>
-noremap <F12> :w<CR>:!compilelatex.sh '%:r'<CR>
+noremap <F12> :w<CR>:!compilelatex '%:r'<CR>
 noremap <F10> :call Tex_ForwardSearchLaTeX()<CR>
 noremap <S-F10> :call Tex_ViewLaTeX()<CR>
 
