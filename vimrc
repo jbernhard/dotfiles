@@ -55,9 +55,11 @@ set splitbelow
 "au BufWinLeave *.* mkview
 "au BufWinEnter *.* silent loadview
 
-
 " omni completion
 set omnifunc=syntaxcomplete#Complete
+
+" ensure latex-suite is loaded
+let g:tex_flavor='latex'
 
 
 "

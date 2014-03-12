@@ -11,9 +11,6 @@ setlocal spell spelllang=en_us
 " latex-suite settings
 "
 
-" ensure latex-suite is loaded
-let g:tex_flavor='latex'
-
 " needed for completion
 setlocal grepprg=grep\ -nH\ $*
 
