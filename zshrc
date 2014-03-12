@@ -7,9 +7,6 @@
 typeset -U path
 path=(~/bin ~/.local/bin $(ruby -rubygems -e "puts Gem.user_dir")/bin $path)
 
-# custom path for latex packages
-export TEXINPUTS=".:~/etc/latex/sty:"
-
 # default programs
 export EDITOR=vim
 export BROWSER=chromium
