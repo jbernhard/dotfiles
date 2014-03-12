@@ -328,4 +328,4 @@ alias pynb="ipython notebook"
 
 # local settings
 # loaded last to enable overrides
-[[ -r ~/.zshrc.local ]] && source ~/.zshrc.local
+[[ -r ~/.zshrc.local ]] && source ~/.zshrc.local || true
