@@ -16,6 +16,7 @@ Bundle 'twerth/ir_black'
 Bundle 'tpope/vim-fugitive'
 Bundle 'mattn/webapi-vim'
 Bundle 'mattn/gist-vim'
+Bundle 'nvie/vim-flake8'
 
 
 " general 
