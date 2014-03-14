@@ -1,0 +1,14 @@
+#
+# ~/.unison/media.prf
+# 
+
+# river <-> serenity
+# media only
+
+include common
+
+root = /media/extra
+root = ssh://serenity//media/a2
+
+path = music
+path = .derp

@@ -1,0 +1,15 @@
+#
+# ~/.unison/default.prf
+# 
+
+# ice9 <-> serenity <-> river
+
+include common
+
+root = /home/jonah
+root = ssh://serenity//home/jonah
+
+path = archive
+path = img
+path = .enc
+path = .ssh/config
