@@ -13,10 +13,12 @@ call vundle#rc()
 
 Bundle 'gmarik/vundle'
 Bundle 'twerth/ir_black'
+Bundle 'ervandew/supertab'
 Bundle 'tpope/vim-fugitive'
 Bundle 'mattn/webapi-vim'
 Bundle 'mattn/gist-vim'
 Bundle 'nvie/vim-flake8'
+Bundle 'hynek/vim-python-pep8-indent'
 
 
 " general 
