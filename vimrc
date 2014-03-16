@@ -12,13 +12,15 @@ set rtp+=~/.vim/bundle/vundle
 call vundle#rc()
 
 Bundle 'gmarik/vundle'
-Bundle 'twerth/ir_black'
+Bundle 'taglist.vim'
 Bundle 'ervandew/supertab'
 Bundle 'tpope/vim-fugitive'
+Bundle 'twerth/ir_black'
 Bundle 'mattn/webapi-vim'
 Bundle 'mattn/gist-vim'
 Bundle 'nvie/vim-flake8'
 Bundle 'hynek/vim-python-pep8-indent'
+Bundle 'davidhalter/jedi-vim'
 
 
 " general 
@@ -59,7 +61,7 @@ set splitbelow
 "au BufWinEnter *.* silent loadview
 
 " omni completion
-set omnifunc=syntaxcomplete#Complete
+"set omnifunc=syntaxcomplete#Complete
 
 " ensure latex-suite is loaded
 let g:tex_flavor='latex'
