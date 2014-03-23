@@ -88,7 +88,7 @@ let g:Tex_AutoFolding = 0
 let g:Tex_FoldedEnvironments = 'abstract,frame'
 let g:Tex_FoldedSections = 'part,chapter,section,subsection,subsubsection'
 let g:Tex_FoldedMisc = '<<<'
-let g:Tex_PromptedEnvironments = 'equation*,align*,equation,align,pmatrix,bmatrix,tabular'
+let g:Tex_PromptedEnvironments = 'equation*,align*,equation,align,pmatrix,bmatrix,tabular,columns'
 let g:Tex_HotKeyMappings = 'equation*,align*,equation,align'
 let g:Tex_Env_center = "\\begin{center}\<CR><++>\<CR>\\end{center}"
 let g:Tex_Env_equation = "\\begin{equation}\<CR><++>\<CR>\\end{equation}"
@@ -100,6 +100,7 @@ let g:Tex_Env_tabular = "\\begin{tabular}{<++>}\<CR>\\toprule\<CR><++>\<CR>\\mid
 let g:Tex_Env_figure = "\\begin{figure}\<CR>\\centering\<CR>\\includegraphics{<++>}\<CR>\\end{figure}"
 let g:Tex_Env_frame = "\\begin{frame}{<++>}\<CR><++>\<CR>\\end{frame}"
 let g:Tex_Env_block = "\\begin{block}{<++>}\<CR><++>\<CR>\\end{block}"
+let g:Tex_Env_columns = "\\begin{columns}\<CR>\\column{<++>}\<CR><++>\<CR>\\end{columns}"
 
 let g:Tex_Env_itemize = "\\begin{itemize}\<CR>\\item <++>\<CR>\\end{itemize}"
 let g:Tex_Env_enumerate = "\\begin{enumerate}\<CR>\\item <++>\<CR>\\end{enumerate}"
