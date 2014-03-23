@@ -57,8 +57,10 @@ set splitright
 set splitbelow
 
 " save views automatically
-"au BufWinLeave *.* mkview
-"au BufWinEnter *.* silent loadview
+" suggest a cron job to run e.g.
+" find $HOME/.vim/view -type f -mtime +7 -delete
+autocmd BufWinLeave ?* mkview
+autocmd BufWinEnter ?* silent loadview
 
 " omni completion
 "set omnifunc=syntaxcomplete#Complete
