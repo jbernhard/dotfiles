@@ -9,7 +9,7 @@ include common
 root = /home/jonah/duke
 root = ssh://phy//home/jeb65
 
-servercmd = /home/jeb65/bin/unison
+servercmd = /home/jeb65/.local/bin/unison
 perms = 0o1755
 
 path = courses
