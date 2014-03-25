@@ -9,7 +9,7 @@ alias .. cd ..
 alias q queue
 alias jobs jobs -v
 alias mirror mirror -v
-alias ct !ct
+alias ct !checktorrent
 alias tn !tvnamer
 
 # only use ssl
