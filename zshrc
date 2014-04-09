@@ -321,6 +321,7 @@ alias fehh="feh -FZY"
 alias py="ipython"
 alias pyqt="ipython qtconsole"
 alias pynb="ipython notebook"
+alias nose="nosetests3 --with-coverage"
 
 
 # local settings
