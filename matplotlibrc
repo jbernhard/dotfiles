@@ -126,7 +126,7 @@ backend      : qt4agg
 # The font.size property is the default font size for text, given in pts.
 # 12pt is the standard value.
 #
-#font.family         : sans-serif
+font.family         : serif
 #font.style          : normal
 #font.variant        : normal
 #font.weight         : medium
@@ -139,6 +139,8 @@ backend      : qt4agg
 #font.size           : 12.0
 #font.serif          : Bitstream Vera Serif, New Century Schoolbook, Century Schoolbook L, Utopia, ITC Bookman, Bookman, Nimbus Roman No9 L, Times New Roman, Times, Palatino, Charter, serif
 #font.sans-serif     : Bitstream Vera Sans, Lucida Grande, Verdana, Geneva, Lucid, Arial, Helvetica, Avant Garde, sans-serif
+font.serif          : CMU Serif
+font.sans-serif     : CMU Sans Serif
 #font.cursive        : Apple Chancery, Textile, Zapf Chancery, Sand, cursive
 #font.fantasy        : Comic Sans MS, Chicago, Charcoal, Impact, Western, fantasy
 #font.monospace      : Bitstream Vera Sans Mono, Andale Mono, Nimbus Mono L, Courier New, Courier, Fixed, Terminal, monospace
@@ -148,7 +150,7 @@ backend      : qt4agg
 # http://matplotlib.org/api/artist_api.html#module-matplotlib.text for more
 # information on text properties
 
-#text.color          : black
+text.color          : 0.25
 
 ### LaTeX customizations. See http://www.scipy.org/Wiki/Cookbook/Matplotlib/UsingTex
 #text.usetex         : False  # use latex for all text handling. The following fonts
@@ -226,7 +228,7 @@ backend      : qt4agg
 # http://matplotlib.org/api/axes_api.html#module-matplotlib.axes
 #axes.hold           : True    # whether to clear the axes by default on
 #axes.facecolor      : white   # axes background color
-#axes.edgecolor      : black   # axes edge color
+axes.edgecolor      : 0.25   # axes edge color
 #axes.linewidth      : 1.0     # edge linewidth
 #axes.grid           : False   # display grid or not
 #axes.titlesize      : large   # fontsize of the axes title
@@ -242,7 +244,7 @@ backend      : qt4agg
                                    # according to the user's locale.
                                    # For example, use ',' as a decimal
                                    # separator in the fr_FR locale.
-#axes.formatter.use_mathtext : False # When True, use mathtext for scientific
+axes.formatter.use_mathtext : True # When True, use mathtext for scientific
                                      # notation.
 #axes.unicode_minus  : True    # use unicode for the minus symbol
                                # rather than hyphen.  See
@@ -265,7 +267,7 @@ backend      : qt4agg
 #xtick.minor.width    : 0.5    # minor tick width in points
 #xtick.major.pad      : 4      # distance to major tick label in points
 #xtick.minor.pad      : 4      # distance to the minor tick label in points
-#xtick.color          : k      # color of the tick labels
+xtick.color          : 0.25      # color of the tick labels
 #xtick.labelsize      : medium # fontsize of the tick labels
 #xtick.direction      : in     # direction: in, out, or inout
 
@@ -275,7 +277,7 @@ backend      : qt4agg
 #ytick.minor.width    : 0.5    # minor tick width in points
 #ytick.major.pad      : 4      # distance to major tick label in points
 #ytick.minor.pad      : 4      # distance to the minor tick label in points
-#ytick.color          : k      # color of the tick labels
+ytick.color          : 0.25      # color of the tick labels
 #ytick.labelsize      : medium # fontsize of the tick labels
 #ytick.direction      : in     # direction: in, out, or inout
 
@@ -302,14 +304,14 @@ backend      : qt4agg
 #legend.borderaxespad : 0.5   # the border between the axes and legend edge in fraction of fontsize
 #legend.columnspacing : 2.    # the border between the axes and legend edge in fraction of fontsize
 #legend.shadow        : False
-#legend.frameon       : True   # whether or not to draw a frame around legend
-#legend.scatterpoints : 3 # number of scatter points
+legend.frameon       : False   # whether or not to draw a frame around legend
+legend.scatterpoints : 1 # number of scatter points
 
 ### FIGURE
 # See http://matplotlib.org/api/figure_api.html#matplotlib.figure.Figure
 #figure.figsize   : 8, 6    # figure size in inches
-#figure.dpi       : 80      # figure dots per inch
-#figure.facecolor : 0.75    # figure facecolor; 0.75 is scalar gray
+figure.dpi       : 96      # figure dots per inch
+figure.facecolor : 1.0    # figure facecolor; 0.75 is scalar gray
 #figure.edgecolor : white   # figure edgecolor
 #figure.autolayout : False  # When True, automatically adjust subplot
                             # parameters to make the plot fit the figure
@@ -368,16 +370,16 @@ backend      : qt4agg
 # the default savefig params can be different from the display params
 # e.g., you may want a higher resolution, or to make the figure
 # background white
-#savefig.dpi         : 100      # figure dots per inch
+savefig.dpi         : 72.27      # figure dots per inch
 #savefig.facecolor   : white    # figure facecolor when saving
 #savefig.edgecolor   : white    # figure edgecolor when saving
-#savefig.format      : png      # png, ps, pdf, svg
+savefig.format      : pdf      # png, ps, pdf, svg
 #savefig.bbox        : standard # 'tight' or 'standard'.
                                 # 'tight' is incompatible with pipe-based animation
                                 # backends but will workd with temporary file based ones:
                                 # e.g. setting animation.writer to ffmpeg will not work,
                                 # use ffmpeg_file instead
-#savefig.pad_inches  : 0.1      # Padding to be used when bbox is set to 'tight'
+savefig.pad_inches  : 0.1      # Padding to be used when bbox is set to 'tight'
 #savefig.jpeg_quality: 95       # when a jpeg is saved, the default quality parameter.
 #savefig.directory   : ~        # default directory in savefig dialog box,
                                 # leave empty to always use current working directory
@@ -398,7 +400,7 @@ backend      : qt4agg
 # pdf backend params
 #pdf.compression   : 6 # integer from 0 to 9
                        # 0 disables compression (good for debugging)
-#pdf.fonttype       : 3         # Output Type 3 (Type3) or Type 42 (TrueType)
+pdf.fonttype       : 42         # Output Type 3 (Type3) or Type 42 (TrueType)
 
 # svg backend params
 #svg.image_inline : True       # write raster image data directly into the svg file
