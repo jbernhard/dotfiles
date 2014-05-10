@@ -150,7 +150,7 @@ font.sans-serif     : CMU Sans Serif
 # http://matplotlib.org/api/artist_api.html#module-matplotlib.text for more
 # information on text properties
 
-text.color          : 0.25
+text.color          : 262626
 
 ### LaTeX customizations. See http://www.scipy.org/Wiki/Cookbook/Matplotlib/UsingTex
 #text.usetex         : False  # use latex for all text handling. The following fonts
@@ -228,13 +228,13 @@ text.color          : 0.25
 # http://matplotlib.org/api/axes_api.html#module-matplotlib.axes
 #axes.hold           : True    # whether to clear the axes by default on
 #axes.facecolor      : white   # axes background color
-axes.edgecolor      : 0.25   # axes edge color
-#axes.linewidth      : 1.0     # edge linewidth
+axes.edgecolor      : 262626   # axes edge color
+axes.linewidth      : 0.5      # edge linewidth
 #axes.grid           : False   # display grid or not
 #axes.titlesize      : large   # fontsize of the axes title
 #axes.labelsize      : medium  # fontsize of the x any y labels
 #axes.labelweight    : normal  # weight of the x and y labels
-#axes.labelcolor     : black
+axes.labelcolor     : 262626
 #axes.axisbelow      : False   # whether axis gridlines and ticks are below
                               # the axes elements (lines, text, etc)
 #axes.formatter.limits : -7, 7 # use scientific notation if log10
@@ -249,10 +249,11 @@ axes.formatter.use_mathtext : True # When True, use mathtext for scientific
 #axes.unicode_minus  : True    # use unicode for the minus symbol
                                # rather than hyphen.  See
                                # http://en.wikipedia.org/wiki/Plus_and_minus_signs#Character_codes
-#axes.color_cycle    : b, g, r, c, m, y, k  # color cycle for plot lines
-                                            # as list of string colorspecs:
-                                            # single letter, long name, or
-                                            # web-style hex
+# color cycle for plot lines
+# as list of string colorspecs:
+# single letter, long name, or
+# web-style hex
+axes.color_cycle    : 66c2a5, fc8d62, 8da0cb, e78ac3, a6d854, ffd92f, e5c494, b3b3b3
 #axes.xmargin        : 0  # x margin.  See `axes.Axes.margins`
 #axes.ymargin        : 0  # y margin See `axes.Axes.margins`
 
@@ -261,23 +262,23 @@ axes.formatter.use_mathtext : True # When True, use mathtext for scientific
 
 ### TICKS
 # see http://matplotlib.org/api/axis_api.html#matplotlib.axis.Tick
-#xtick.major.size     : 4      # major tick size in points
-#xtick.minor.size     : 2      # minor tick size in points
+xtick.major.size     : 0      # major tick size in points
+xtick.minor.size     : 0      # minor tick size in points
 #xtick.major.width    : 0.5    # major tick width in points
 #xtick.minor.width    : 0.5    # minor tick width in points
 #xtick.major.pad      : 4      # distance to major tick label in points
 #xtick.minor.pad      : 4      # distance to the minor tick label in points
-xtick.color          : 0.25      # color of the tick labels
+xtick.color          : 262626  # color of the tick labels
 #xtick.labelsize      : medium # fontsize of the tick labels
 #xtick.direction      : in     # direction: in, out, or inout
 
-#ytick.major.size     : 4      # major tick size in points
-#ytick.minor.size     : 2      # minor tick size in points
+ytick.major.size     : 0      # major tick size in points
+ytick.minor.size     : 0      # minor tick size in points
 #ytick.major.width    : 0.5    # major tick width in points
 #ytick.minor.width    : 0.5    # minor tick width in points
 #ytick.major.pad      : 4      # distance to major tick label in points
 #ytick.minor.pad      : 4      # distance to the minor tick label in points
-ytick.color          : 0.25      # color of the tick labels
+ytick.color          : 262626  # color of the tick labels
 #ytick.labelsize      : medium # fontsize of the tick labels
 #ytick.direction      : in     # direction: in, out, or inout
 
