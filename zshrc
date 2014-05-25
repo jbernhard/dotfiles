@@ -288,8 +288,7 @@ alias start="sudo systemctl start"
 alias stop="sudo systemctl stop"
 alias restart="sudo systemctl restart"
 alias jc="journalctl"
-#alias updatemirrorlist="sudo reflector --country 'United States' --protocol http --age 12 --sort rate --verbose --save /etc/pacman.d/mirrorlist"
-alias updatemirrorlist="sudo reflector --country 'Germany' --protocol http --age 12 --sort rate --verbose --save /etc/pacman.d/mirrorlist"
+alias updatemirrorlist="sudo reflector --country 'United States' --protocol http --age 12 --sort rate --verbose --save /etc/pacman.d/mirrorlist"
 alias updategrub="sudo grub-mkconfig -o /boot/grub/grub.cfg"
 
 # single letter commands
