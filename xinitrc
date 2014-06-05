@@ -20,18 +20,14 @@ unclutter -idle 4 -jitter 1 -root &
 case `hostname` in 
   river)
     fontsize=9
-    xset dpms 180 1200 2400
+    xset dpms 0 0 180
     redshift &> /dev/null &
     numlockx on
   ;;
 
   ice9)
     fontsize=10
-    if [[ `</sys/class/power_supply/BAT0/status` == 'Discharging' ]]; then
-      xset dpms 60 90 120 
-    else
-      xset dpms 180 480 780 
-    fi
+    xset dpms 0 0 180
     redshift &> /dev/null &
     touchpad on
   ;;
