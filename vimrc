@@ -8,10 +8,11 @@ set nocompatible
 
 " vundle
 filetype off
-set rtp+=~/.vim/bundle/vundle
-call vundle#rc()
 
-Plugin 'gmarik/vundle'
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+Plugin 'gmarik/Vundle.vim'
 Plugin 'taglist.vim'
 Plugin 'ervandew/supertab'
 Plugin 'tpope/vim-fugitive'
@@ -21,6 +22,8 @@ Plugin 'mattn/gist-vim'
 Plugin 'nvie/vim-flake8'
 Plugin 'hynek/vim-python-pep8-indent'
 Plugin 'davidhalter/jedi-vim'
+
+call vundle#end()
 
 
 " general 
