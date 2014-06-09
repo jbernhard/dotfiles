@@ -71,6 +71,14 @@ autocmd BufWinEnter *.* silent loadview
 " ensure latex-suite is loaded
 let g:tex_flavor='latex'
 
+" gist settings
+let g:gist_clip_command = 'xsel --clipboard'
+let g:gist_detect_filetype = 1
+let g:gist_open_browser_after_post = 1
+let g:gist_show_privates = 1
+let g:gist_post_private = 1
+let g:gist_update_on_write = 2
+
 
 "
 " keyboard
