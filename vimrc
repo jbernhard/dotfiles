@@ -65,6 +65,9 @@ set splitbelow
 autocmd BufWinLeave *.* mkview
 autocmd BufWinEnter *.* silent loadview
 
+" markdown file extension
+autocmd BufNewFile,BufReadPost *.md set filetype=markdown
+
 " omni completion
 "set omnifunc=syntaxcomplete#Complete
 
