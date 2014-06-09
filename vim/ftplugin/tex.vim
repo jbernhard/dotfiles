@@ -38,12 +38,12 @@ let g:Tex_CompileRule_pdf	= 'pdflatex -interaction nonstopmode -synctex=1 -shell
 
 " compile & view shortcuts
 "no <F12> :w<CR>:call Tex_RunLaTeX()<CR>
-noremap <F12> :w<CR>:!compilelatex '%:r'<CR>
-noremap <F10> :call Tex_ForwardSearchLaTeX()<CR>
-noremap <S-F10> :call Tex_ViewLaTeX()<CR>
+noremap <buffer> <F12> :w<CR>:!compilelatex '%:r'<CR>
+noremap <buffer> <F10> :call Tex_ForwardSearchLaTeX()<CR>
+noremap <buffer> <S-F10> :call Tex_ViewLaTeX()<CR>
 
 " texcount shortcut
-noremap <F9> :w<CR>:!texcount %<CR>
+noremap <buffer> <F9> :w<CR>:!texcount %<CR>
 
 " new jump shortcut
 nmap <C-space> <Plug>IMAP_JumpForward

@@ -3,4 +3,4 @@
 "
 
 " run shortcut
-noremap <F12> :w<CR>:!markdown '%' > '%:r.html'<CR>
+noremap <buffer> <F12> :w<CR>:!markdown '%' > '%:r.html'<CR>

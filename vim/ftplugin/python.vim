@@ -15,4 +15,4 @@ setlocal foldmethod=indent
 setlocal foldlevel=99
 
 " run shortcut
-noremap <F12> :w<CR>:!./'%'<CR>
+noremap <buffer> <F12> :w<CR>:!./'%'<CR>
