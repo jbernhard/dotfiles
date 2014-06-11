@@ -22,6 +22,8 @@ Plugin 'mattn/gist-vim'
 Plugin 'nvie/vim-flake8'
 Plugin 'hynek/vim-python-pep8-indent'
 Plugin 'davidhalter/jedi-vim'
+Plugin 'scrooloose/syntastic'
+Plugin 'a.vim'
 
 call vundle#end()
 
