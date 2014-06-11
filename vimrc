@@ -89,6 +89,9 @@ let g:gist_update_on_write = 2
 " keyboard
 " 
 
+" redefine leader
+let mapleader = ","
+
 " should be the default
 map Y y$
 
