@@ -24,6 +24,7 @@ Plugin 'hynek/vim-python-pep8-indent'
 Plugin 'davidhalter/jedi-vim'
 Plugin 'scrooloose/syntastic'
 Plugin 'a.vim'
+Plugin 'freitass/todo.txt-vim'
 
 call vundle#end()
 
