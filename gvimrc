@@ -2,14 +2,27 @@
 " ~/.gvimrc
 "
 
-if hostname() == "river"
-  set guifont=DejaVu\ Sans\ Mono\ 9
-elseif hostname() == "ice9"
-  set guifont=DejaVu\ Sans\ Mono\ 10
-elseif hostname() == "serenity"
-  set guifont=DejaVu\ Sans\ Mono\ 13
+" gui color scheme
+colorscheme solarized
+
+" light/dark depending on day/night
+let hour = strftime('%H')
+if hour > 6 && hour < 20
+  set background=light
+else
+  set background=dark
 endif
 
+" set font size according to hostname
+execute 'set guifont=DejaVu\ Sans\ Mono\ ' . get({'river': 9, 'ice9': 10, 'serenity': 13}, hostname(), 10)
+
+" remove gui clutter
+set guioptions-=m   " menubar
+set guioptions-=T   " toolbar
+set guioptions-=r   " scrollbar
+
+" disable cursor blink
 set guicursor=a:blinkon0
 
+" disable alt-key access to menus
 set winaltkeys=no
