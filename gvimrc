@@ -19,7 +19,8 @@ execute 'set guifont=DejaVu\ Sans\ Mono\ ' . get({'river': 9, 'ice9': 10, 'seren
 " remove gui clutter
 set guioptions-=m   " menubar
 set guioptions-=T   " toolbar
-set guioptions-=r   " scrollbar
+set guioptions-=r   " right scrollbar
+set guioptions-=L   " left scrollbar
 
 " disable cursor blink
 set guicursor=a:blinkon0
