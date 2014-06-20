@@ -36,7 +36,7 @@ filetype plugin indent on
 syntax on
 colorscheme ir_black
 set number
-set textwidth=140
+set textwidth=110
 set tabstop=2
 set softtabstop=2
 set shiftwidth=2
