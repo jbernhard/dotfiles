@@ -106,7 +106,7 @@ let g:Tex_Env_itemize = "\\begin{itemize}\<CR>\\item <++>\<CR>\\end{itemize}"
 let g:Tex_Env_enumerate = "\\begin{enumerate}\<CR>\\item <++>\<CR>\\end{enumerate}"
 
 let g:Tex_PromptedCommands = 'ref,cite,label,includegraphics,textsuperscript'
-let g:Tex_IgnoredWarnings = 
+let g:Tex_IgnoredWarnings =
 \"Underfull\n".
 \"Overfull\n".
 \"specifier changed to\n".

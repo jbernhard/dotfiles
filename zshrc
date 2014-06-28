@@ -18,8 +18,8 @@ export LESS='-R -i'
 export LESS_TERMCAP_mb=$'\E[01;31m'
 export LESS_TERMCAP_md=$'\E[01;31m'
 export LESS_TERMCAP_me=$'\E[0m'
-export LESS_TERMCAP_se=$'\E[0m'                           
-export LESS_TERMCAP_so=$'\E[01;44;33m'                                 
+export LESS_TERMCAP_se=$'\E[0m'
+export LESS_TERMCAP_so=$'\E[01;44;33m'
 export LESS_TERMCAP_ue=$'\E[0m'
 export LESS_TERMCAP_us=$'\E[01;32m'
 
@@ -34,7 +34,7 @@ setterm -blength 0
 
 # zsh options
 setopt nobeep
-setopt autocd 
+setopt autocd
 setopt dvorak
 setopt correct
 setopt automenu
@@ -60,7 +60,7 @@ SAVEHIST=2000
 autoload -U zcalc zargs zmv
 
 # completion
-zmodload zsh/complist 
+zmodload zsh/complist
 autoload -U compinit
 compinit
 zstyle :compinstall filename "${HOME}/.zshrc"
@@ -126,7 +126,7 @@ PROMPT="%{%B%}%{$fg[$usercolor]%}%n%{$fg[$sepcolor]%}@%{$fg[$hostcolor]%}%m%{$fg
 
 #
 # right git prompt
-# 
+#
 
 # color and symbol settings
 GIT_PROMPT_AHEAD="%{$fg[red]%}+"
@@ -164,7 +164,7 @@ _git_state () {
   git diff --cached --quiet 2> /dev/null || GIT_STATE=$GIT_STATE$GIT_PROMPT_STAGED
 
   [[ -n $GIT_STATE ]] || GIT_STATE=$GIT_PROMPT_EMPTY
-    
+
   echo "$GIT_STATE"
 }
 
@@ -192,7 +192,7 @@ fi
 
 
 
-# 
+#
 # keyboard
 #
 

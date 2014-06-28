@@ -61,15 +61,15 @@ bind ']' select 12
 
 # dvorak left and right
 bind h prev
-bind ^h prev  
+bind ^h prev
 bind s next
 bind ^s next
 
 # dvorak ease of use
 bind t screen
 bind ^t screen
-bind n quit 
-bind ^n quit 
+bind n quit
+bind ^n quit
 
 # other helpful shortcuts
 bind p paste .

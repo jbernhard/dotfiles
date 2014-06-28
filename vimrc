@@ -31,7 +31,7 @@ Plugin 'freitass/todo.txt-vim'
 call vundle#end()
 
 
-" general 
+" general
 filetype plugin indent on
 syntax on
 colorscheme ir_black
@@ -90,7 +90,7 @@ let g:gist_update_on_write = 2
 
 "
 " keyboard
-" 
+"
 
 " redefine leader
 let mapleader = ","
