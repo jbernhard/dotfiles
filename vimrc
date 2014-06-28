@@ -14,7 +14,9 @@ call vundle#begin()
 
 Plugin 'gmarik/Vundle.vim'
 Plugin 'taglist.vim'
-Plugin 'ervandew/supertab'
+"Plugin 'ervandew/supertab'
+Plugin 'Valloric/YouCompleteMe'
+Plugin 'Valloric/ListToggle'
 Plugin 'tpope/vim-fugitive'
 Plugin 'twerth/ir_black'
 Plugin 'altercation/vim-colors-solarized'
@@ -23,8 +25,8 @@ Plugin 'mattn/webapi-vim'
 Plugin 'mattn/gist-vim'
 Plugin 'nvie/vim-flake8'
 Plugin 'hynek/vim-python-pep8-indent'
-Plugin 'davidhalter/jedi-vim'
-Plugin 'scrooloose/syntastic'
+"Plugin 'davidhalter/jedi-vim'
+"Plugin 'scrooloose/syntastic'
 Plugin 'a.vim'
 Plugin 'freitass/todo.txt-vim'
 
@@ -76,6 +78,10 @@ autocmd BufNewFile,BufReadPost *.md set filetype=markdown
 " omni completion
 "set omnifunc=syntaxcomplete#Complete
 
+" youcompleteme settings
+let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/ycm_extra_conf.py'
+let g:ycm_always_populate_location_list = 1
+
 " ensure latex-suite is loaded
 let g:tex_flavor='latex'
 
@@ -87,6 +93,9 @@ let g:gist_show_privates = 1
 let g:gist_post_private = 1
 let g:gist_update_on_write = 2
 
+" syntastic settings
+"let g:syntastic_cpp_check_header = 1
+"let g:syntastic_cpp_compiler_options = '-std=c++11'
 
 "
 " keyboard
