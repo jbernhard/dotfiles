@@ -48,6 +48,7 @@ set smarttab
 set showtabline=2
 set viminfo='100,f1
 set hlsearch
+set incsearch
 set wildmode=list:longest,full
 set wildignore=*.log,*.aux,*.dvi,*.aut,*.aux,*.bbl,*.blg,*.dvi,*.end,*.fff,*.log,*.out,*.pdf,*.ps,*.toc,*.ttt,*.synctex.gz,*.table,*.gnuplot,*.snm,*.nav,*.nb
 set autochdir
@@ -57,14 +58,57 @@ set ignorecase
 set smartcase
 set ttymouse=xterm2
 set mouse=a
+set ttimeout
+set ttimeoutlen=100
+set scrolloff=1
+set sidescrolloff=5
+
+" prefer vertical split
+set splitright
+set splitbelow
 
 " put all swap files in a central location
 set directory^=$HOME/.vim/tmp//
 set backupdir^=$HOME/.vim/tmp//
 
-" prefer vertical split
-set splitright
-set splitbelow
+" extended matching
+runtime! macros/matchit.vim
+
+
+" gui/terminal-specific
+if has('gui_running')
+  " gui colors
+  colorscheme solarized
+
+  " light/dark depending on day/night
+  let hour = strftime('%H')
+  if hour > 6 && hour < 20
+    set background=light
+  else
+    set background=dark
+  endif
+
+  " toggle light/dark shortcut
+  map <F4> :let &background = ( &background == "dark"? "light" : "dark" )<CR>
+
+  " set font size according to hostname
+  execute 'set guifont=DejaVu\ Sans\ Mono\ ' . get({'river': 9, 'ice9': 10, 'serenity': 13}, hostname(), 10)
+
+  " remove gui clutter
+  set guioptions-=m   " menubar
+  set guioptions-=T   " toolbar
+  set guioptions-=r   " right scrollbar
+  set guioptions-=L   " left scrollbar
+
+  " disable cursor blink
+  set guicursor=a:blinkon0
+
+  " disable alt-key access to menus
+  set winaltkeys=no
+else
+  " terminal colors
+  colorscheme ir_black
+endif
 
 " save views automatically
 " suggest a cron job to run e.g.
