@@ -18,6 +18,7 @@ Plugin 'taglist.vim'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'Valloric/ListToggle'
 Plugin 'tpope/vim-fugitive'
+Plugin 'tpope/vim-surround'
 Plugin 'twerth/ir_black'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'chriskempson/base16-vim'
@@ -29,6 +30,7 @@ Plugin 'hynek/vim-python-pep8-indent'
 "Plugin 'scrooloose/syntastic'
 Plugin 'a.vim'
 Plugin 'freitass/todo.txt-vim'
+Plugin 'vhdirk/vim-cmake'
 
 call vundle#end()
 
