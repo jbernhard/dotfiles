@@ -34,11 +34,12 @@ let g:Tex_ViewRule_pdf = 'okular'
 
 " uncomment these for pdflatex
 let g:Tex_MultipleCompileFormats = 'pdf'
-let g:Tex_CompileRule_pdf	= 'pdflatex -interaction nonstopmode -synctex=1 -shell-escape $*'
+"let g:Tex_CompileRule_pdf	= 'pdflatex -interaction nonstopmode -synctex=1 -shell-escape $*'
+let g:Tex_CompileRule_pdf	= 'compilelatex %:r'
 
 " compile & view shortcuts
 "no <F12> :w<CR>:call Tex_RunLaTeX()<CR>
-noremap <buffer> <F12> :w<CR>:!compilelatex '%:r'<CR>
+"noremap <buffer> <F12> :w<CR>:!compilelatex '%:r'<CR>
 noremap <buffer> <F10> :call Tex_ForwardSearchLaTeX()<CR>
 noremap <buffer> <S-F10> :call Tex_ViewLaTeX()<CR>
 

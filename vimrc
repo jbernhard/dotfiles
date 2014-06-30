@@ -38,7 +38,7 @@ call vundle#end()
 " general
 filetype plugin indent on
 syntax on
-colorscheme ir_black
+
 set number
 set textwidth=110
 set tabstop=2
@@ -155,6 +155,9 @@ map Y y$
 
 " spellcheck toggle
 map <F11> :setlocal spell! spelllang=en_us<CR>
+
+" make shortcut
+map <Leader>m :update<CR>:make<CR>
 
 " :W = :w
 cmap W<CR> w<CR>
