@@ -323,6 +323,8 @@ alias py="ipython"
 alias pyqt="ipython qtconsole"
 alias pynb="ipython notebook"
 alias nose="nosetests3 --with-coverage"
+alias g++11="g++ -std=c++11"
+alias cpplint="cpplint --extensions=cxx,h --linelength=110"
 
 
 # local settings
