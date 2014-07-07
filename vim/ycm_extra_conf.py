@@ -10,6 +10,7 @@ flags = [
 '-Wpedantic',
 '-Weffc++',
 '-Werror',
+'-Wno-missing-braces',
 '-fexceptions',
 '-DNDEBUG',
 '-std=c++11',
