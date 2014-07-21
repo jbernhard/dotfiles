@@ -4,12 +4,12 @@
 
 
 ! colors
-#define off_black #111111
-#define off_white #f5f5f5
-*background:  off_black
-*foreground:  off_white
+#define bg black
+#define fg #f3f3f3
+*background:  bg
+*foreground:  fg
 ! black
-*color0:  off_black
+*color0:  bg
 *color8:  #545054
 ! red
 *color1:  #a80000
@@ -31,7 +31,7 @@
 *color14: #50fcf8
 ! white
 *color7:  #a8a8a8
-*color15: off_white
+*color15: fg
 
 
 ! urxvt
@@ -43,7 +43,7 @@ urxvt.iconFile: /usr/share/icons/oxygen/22x22/apps/utilities-terminal.png
 ! urxvt.font -> set in .xinitrc
 urxvt.scrollBar: false
 urxvt.fading: 5
-urxvt.borderColor: off_black
+urxvt.borderColor: bg
 urxvt.internalBorder: 2
 urxvt.externalBorder: 0
 urxvt.saveLines: 10000
