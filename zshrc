@@ -30,7 +30,7 @@ eval `dircolors -b`
 stty stop undef
 
 # disable beep
-setterm -blength 0
+#setterm -blength 0
 
 # zsh options
 setopt nobeep
