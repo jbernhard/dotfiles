@@ -296,8 +296,11 @@ alias c='clear'
 alias g="git"
 alias q="exit"
 alias s="screen"
-function o () {
-  xdg-open $@ &> /dev/null &
+#function o () {
+#  xdg-open $@ &> /dev/null &
+#}
+function ok () {
+  okular $@ &> /dev/null &
 }
 
 # etc
