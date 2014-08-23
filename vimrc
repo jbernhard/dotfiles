@@ -64,7 +64,7 @@ set ttimeout
 set ttimeoutlen=100
 set scrolloff=1
 set sidescrolloff=5
-set completeopt=longest,menuone
+"set completeopt=longest,menuone
 
 " prefer vertical split
 set splitright
