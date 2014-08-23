@@ -2,7 +2,7 @@
 # ~/.unison/duke.prf
 #
 
-# ice9 <-> duke <-> river
+# ice9 <-> duke <-> affinity
 
 include common
 

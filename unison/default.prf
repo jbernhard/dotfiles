@@ -2,7 +2,7 @@
 # ~/.unison/default.prf
 #
 
-# ice9 <-> serenity <-> river
+# ice9 <-> serenity <-> affinity
 
 include common
 

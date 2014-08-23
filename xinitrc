@@ -18,7 +18,7 @@ unclutter -idle 4 -jitter 1 -root &
 
 # host-specific
 case `hostname` in
-  river)
+  affinity)
     fontsize=9
     xset dpms 0 0 180
     redshift &> /dev/null &

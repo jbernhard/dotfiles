@@ -95,7 +95,7 @@ if has('gui_running')
   map <F4> :let &background = ( &background == "dark"? "light" : "dark" )<CR>
 
   " set font size according to hostname
-  execute 'set guifont=DejaVu\ Sans\ Mono\ ' . get({'river': 9, 'ice9': 10, 'serenity': 13}, hostname(), 10)
+  execute 'set guifont=DejaVu\ Sans\ Mono\ ' . get({'affinity': 9, 'ice9': 10, 'serenity': 13}, hostname(), 10)
 
   " remove gui clutter
   set guioptions-=m   " menubar
