@@ -116,8 +116,8 @@ endif
 " save views automatically
 " suggest a cron job to run e.g.
 " find $HOME/.vim/view -type f -mtime +7 -delete
-autocmd BufWinLeave *.* mkview
-autocmd BufWinEnter *.* silent loadview
+autocmd BufWinLeave * if expand("%") != "" | mkview | endif
+autocmd BufWinEnter * if expand("%") != "" | loadview | endif
 
 " markdown file extension
 autocmd BufNewFile,BufReadPost *.md set filetype=markdown
