@@ -20,14 +20,14 @@ unclutter -idle 4 -jitter 1 -root &
 case `hostname` in
   affinity)
     fontsize=9
-    xset dpms 0 0 180
+    xset dpms 180
     redshift &> /dev/null &
     numlockx on
   ;;
 
   ice9)
     fontsize=10
-    xset dpms 0 0 180
+    xset dpms 180
     redshift &> /dev/null &
     touchpad on
   ;;
