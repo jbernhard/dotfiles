@@ -296,12 +296,6 @@ alias c='clear'
 alias g="git"
 alias q="exit"
 alias s="screen"
-#function o () {
-#  xdg-open $@ &> /dev/null &
-#}
-function ok () {
-  okular $@ &> /dev/null &
-}
 
 # etc
 alias sx="startx"
@@ -328,6 +322,9 @@ alias pynb="ipython notebook"
 alias nose="nosetests3 --with-coverage"
 alias g++11="g++ -std=c++11"
 alias cpplint="cpplint --extensions=cxx,h --linelength=110"
+
+function ok () { okular $@ &> /dev/null & }
+function g_clone () { git clone git@github.com:jbernhard/$1.git $2 }
 
 
 # local settings
