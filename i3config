@@ -129,7 +129,7 @@ bindsym $mod+Shift+R reload
 # restart in place -- preserves layout/session
 bindsym $mod+Shift+Control+R restart
 # quit
-bindsym $mod+Shift+Backspace exit
+bindsym $mod+Shift+BackSpace exit
 
 # resize window
 mode "resize" {
