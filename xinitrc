@@ -47,4 +47,4 @@ xrdb -merge <<< "urxvt.font: xft: Deja Vu Sans Mono-$fontsize"
 
 
 # start window manager
-exec awesome
+exec i3
