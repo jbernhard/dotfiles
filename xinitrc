@@ -23,6 +23,8 @@ case `hostname` in
     xset dpms 180
     redshift &> /dev/null &
     numlockx on
+    # compositor prevents tearing with nvidia
+    compton -b --backend glx --glx-no-stencil --paint-on-overlay --unredir-if-possible --vsync opengl-swc
   ;;
 
   ice9)
