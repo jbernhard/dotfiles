@@ -24,12 +24,8 @@ bindsym $mod+Return exec urxvt
 # close focused window
 bindsym $mod+Shift+Q kill
 
-# start dmenu (a program launcher)
-bindsym $mod+e exec dmenu_run
-# There also is the (new) i3-dmenu-desktop which only displays applications
-# shipping a .desktop file. It is a wrapper around dmenu, so you need that
-# installed.
-# bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
+# program launcher
+bindsym $mod+space exec --no-startup-id i3-dmenu-desktop
 
 # change focus
 bindsym $mod+h focus left
@@ -37,11 +33,15 @@ bindsym $mod+t focus down
 bindsym $mod+n focus up
 bindsym $mod+s focus right
 
-# alternatively, you can use the cursor keys:
+# same using arrow keys
 bindsym $mod+Left focus left
 bindsym $mod+Down focus down
 bindsym $mod+Up focus up
 bindsym $mod+Right focus right
+
+# left/right with tab
+bindsym $mod+Tab focus right
+bindsym $mod+Shift+Tab focus left
 
 # move focused window
 bindsym $mod+Shift+H move left
@@ -49,37 +49,35 @@ bindsym $mod+Shift+T move down
 bindsym $mod+Shift+N move up
 bindsym $mod+Shift+S move right
 
-# alternatively, you can use the cursor keys:
+# same with arrow keys
 bindsym $mod+Shift+Left move left
 bindsym $mod+Shift+Down move down
 bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
-# split in horizontal orientation
-bindsym $mod+d split h
+# split horizontal/vertical
+bindsym $mod+backslash split h
+bindsym $mod+minus split v
 
-# split in vertical orientation
-bindsym $mod+k split v
+# container layout
+#bindsym <unbound> layout stacking
+bindsym $mod+o layout tabbed
+bindsym $mod+a layout toggle split
 
-# enter fullscreen mode for the focused container
+# focus the parent container
+bindsym $mod+e focus parent
+
+# focus the child container
+bindsym $mod+Shift+E focus child
+
+# fullscreen
 bindsym $mod+f fullscreen
-
-# change container layout (stacked, tabbed, toggle split)
-#bindsym $mod+o layout stacking
-#bindsym $mod+comma layout tabbed
-#bindsym $mod+period layout toggle split
 
 # toggle tiling / floating
 bindsym $mod+Shift+space floating toggle
 
 # change focus between tiling / floating windows
-bindsym $mod+space focus mode_toggle
-
-# focus the parent container
-bindsym $mod+a focus parent
-
-# focus the child container
-#bindsym $mod+d focus child
+bindsym $mod+Control+space focus mode_toggle
 
 # switch to workspace
 bindsym $mod+1 workspace 1
