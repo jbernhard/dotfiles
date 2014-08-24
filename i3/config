@@ -12,6 +12,12 @@ font pango:DejaVu Sans Mono 9
 # mouse+$mod moves floating windows
 floating_modifier $mod
 
+# minimal borders
+new_window 1pixel
+new_float 1pixel
+hide_edge_borders both
+bindsym $mod+b border toggle
+
 # start a terminal
 bindsym $mod+Return exec urxvt
 
