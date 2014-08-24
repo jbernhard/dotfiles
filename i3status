@@ -4,50 +4,23 @@
 
 general {
   colors = true
-  interval = 5
+  interval = 1
 }
 
-order += "ipv6"
-order += "disk /"
-order += "run_watch DHCP"
-order += "run_watch VPN"
-order += "wireless wlan0"
-order += "ethernet eth0"
-order += "battery 0"
-order += "load"
-order += "tztime local"
+order += "cpu_usage"
+order += "cpu_temperature 0"
+order += "time"
 
-wireless wlan0 {
-  format_up = "W: (%quality at %essid) %ip"
-  format_down = "W: down"
+cpu_usage {
+  format = "%usage"
 }
 
-ethernet eth0 {
-  # if you use %speed, i3status requires root privileges
-  format_up = "E: %ip (%speed)"
-  format_down = "E: down"
+cpu_temperature 0 {
+  format = "%degrees"
+  max_threshold = 60
+  path = "/sys/devices/platform/coretemp.0/hwmon/hwmon1/temp1_input"
 }
 
-battery 0 {
-  format = "%status %percentage %remaining"
-}
-
-run_watch DHCP {
-  pidfile = "/var/run/dhclient*.pid"
-}
-
-run_watch VPN {
-  pidfile = "/var/run/vpnc/pid"
-}
-
-tztime local {
-  format = "%Y-%m-%d %H:%M:%S"
-}
-
-load {
-  format = "%1min"
-}
-
-disk "/" {
-  format = "%avail"
+time {
+  format = "%a %d %b %T"
 }
