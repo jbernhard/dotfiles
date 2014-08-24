@@ -21,11 +21,11 @@ bindsym $mod+b border toggle
 # start a terminal
 bindsym $mod+Return exec urxvt
 
-# close focused window
-bindsym $mod+Shift+Q kill
-
 # program launcher
 bindsym $mod+space exec --no-startup-id i3-dmenu-desktop
+
+# close focused window
+bindsym $mod+Shift+Q kill
 
 # change focus
 bindsym $mod+h focus left
