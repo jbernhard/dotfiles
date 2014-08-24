@@ -7,7 +7,7 @@ set $mod Mod4
 
 # window title font
 # also for bar unless a different font is specified below
-font pango:DejaVu Sans Mono 8
+font pango:DejaVu Sans Mono 9
 
 # mouse+$mod moves floating windows
 floating_modifier $mod
