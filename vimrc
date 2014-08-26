@@ -78,12 +78,11 @@ set backupdir^=$HOME/.vim/tmp//
 runtime! macros/matchit.vim
 
 
+colorscheme solarized
+
 " gui/terminal-specific
 if has('gui_running')
-  " gui colors
-  colorscheme solarized
-
-  " light/dark depending on day/night
+  " gui light/dark depending on day/night
   let hour = strftime('%H')
   if hour > 6 && hour < 20
     set background=light
@@ -109,8 +108,8 @@ if has('gui_running')
   " disable alt-key access to menus
   set winaltkeys=no
 else
-  " terminal colors
-  colorscheme ir_black
+  " always dark in terminal
+  set background=dark
 endif
 
 " save views automatically
