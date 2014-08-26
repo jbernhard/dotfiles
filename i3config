@@ -96,8 +96,8 @@ bindsym $mod+Shift+less     move container to workspace 5
 bindsym $mod+Shift+greater  move container to workspace 6
 
 # assign workspaces to screens
-set $screen0 DP-1
-set $screen1 HDMI-0
+set $screen0 HDMI-0
+set $screen1 DP-1
 workspace 1 output $screen0
 workspace 2 output $screen0
 workspace 3 output $screen0
