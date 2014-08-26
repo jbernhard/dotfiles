@@ -147,9 +147,44 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
+# solarized
+set $base_3  #002b36
+set $base_2  #073642
+set $base_1  #586e75
+set $base_0  #657b83
+set $base0  #839496
+set $base1  #93a1a1
+set $base2  #eee8d5
+set $base3  #fdf6e3
+set $yellow  #b58900
+set $orange  #cb4b16
+set $red     #dc322f
+set $magenta #d33682
+set $violet  #6c71c4
+set $blue    #268bd2
+set $cyan    #2aa198
+set $green   #859900
+
+# color class           border  bg      text    indicator
+client.focused          #4c7899 #285577 #ffffff #2e9ef4
+client.focused_inactive #333333 #5f676a #ffffff #484e50
+client.unfocused        #333333 #222222 #888888 #292d2e
+client.urgent           #2f343a #900000 #ffffff #900000
+
 # status bar
 bar {
   status_command i3status
   position top
   strip_workspace_numbers yes
+  colors {
+    background $base_3
+    statusline $base0
+    separator  $base_1
+
+    # color class      border  bg      text
+    focused_workspace  $cyan   $cyan   $base2
+    active_workspace   $cyan   $base_3 $base_0
+    inactive_workspace $base_3 $base_3 $base_0
+    urgent_workspace   $red    $base_3 $base_0
+  }
 }
