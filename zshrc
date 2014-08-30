@@ -103,25 +103,25 @@ setopt prompt_subst
 
 # set color of username: root or normal user
 if [[ $UID == 0 ]]; then
-  usercolor="red"
+  user_color=$fg_no_bold[red]
 else
-  usercolor="blue"
+  user_color=$fg_no_bold[blue]
 fi
 
 # set color of hostname: local or ssh
 if [[ -n "$SSH_CLIENT" ]]; then
-  hostcolor="yellow"
+  host_color=$fg_no_bold[yellow]
 else
-  hostcolor="blue"
+  host_color=$fg_no_bold[blue]
 fi
 
 # other colors
-sepcolor="black"
-pathcolor="blue"
-retcolor="red"
-inputcolor="white"
+sep_color=$fg_bold[green]
+path_color=$fg_no_bold[blue]
+ret_color=$fg_no_bold[red]
+accent_color=$fg_no_bold[green]
 
-PROMPT="%{%B%}%{$fg[$usercolor]%}%n%{$fg[$sepcolor]%}@%{$fg[$hostcolor]%}%m%{$fg[$sepcolor]%}:%{$fg[$pathcolor]%}%~ %(?..%{$fg[$retcolor]%}%? )%{$fg[black]%}>%{%b%}%{$fg[green]%}>%{%B%}%{$fg[green]%}> %{$fg[$inputcolor]%}"
+PROMPT="%{$user_color%}%n%{$sep_color%}@%{$host_color%}%m%{$sep_color%}:%{$path_color%}%~ %(?..%{$ret_color%}%? )%{$accent_color%}> %{$reset_color%}"
 
 
 #
@@ -129,14 +129,14 @@ PROMPT="%{%B%}%{$fg[$usercolor]%}%n%{$fg[$sepcolor]%}@%{$fg[$hostcolor]%}%m%{$fg
 #
 
 # color and symbol settings
-GIT_PROMPT_AHEAD="%{$fg[red]%}+"
-GIT_PROMPT_BEHIND="%{$fg[cyan]%}-"
-GIT_PROMPT_MERGING="%{$fg[magenta]%}⚡︎"
+GIT_PROMPT_AHEAD="%{$fg_bold[red]%}+"
+GIT_PROMPT_BEHIND="%{$fg_no_bold[cyan]%}-"
+GIT_PROMPT_MERGING="%{$fg_no_bold[magenta]%}⚡︎"
 GIT_SYMBOL="▪"
-GIT_PROMPT_UNTRACKED="%{$fg[red]%}$GIT_SYMBOL"
-GIT_PROMPT_MODIFIED="%{$fg[yellow]%}$GIT_SYMBOL"
-GIT_PROMPT_STAGED="%{$fg[green]%}$GIT_SYMBOL"
-GIT_PROMPT_EMPTY="%{$fg[blue]%}$GIT_SYMBOL"
+GIT_PROMPT_UNTRACKED="%{$fg_no_bold[red]%}$GIT_SYMBOL"
+GIT_PROMPT_MODIFIED="%{$fg_no_bold[yellow]%}$GIT_SYMBOL"
+GIT_PROMPT_STAGED="%{$fg_no_bold[green]%}$GIT_SYMBOL"
+GIT_PROMPT_EMPTY="%{$fg_no_bold[blue]%}$GIT_SYMBOL"
 
 
 # find git branch/tag, or name-rev if on detached head
@@ -171,7 +171,7 @@ _git_state () {
 # make prompt if inside a git repository
 _git_prompt () {
   local git_where="$(_git_branch)"
-  [ -n "$git_where" ] && echo "%{$fg[$sepcolor]%}<%{$fg[$pathcolor]%}${git_where#(refs/heads/|tags/)}%{$fg[$sepcolor]%}:$(_git_state)%{$fg[$sepcolor]%}>%{$fg[$inputcolor]%}"
+  [ -n "$git_where" ] && echo "%{$path_color%}${git_where#(refs/heads/|tags/)}%{$sep_color%}:$(_git_state)%{$reset_color%}"
 }
 
 RPROMPT='$(_git_prompt)'
