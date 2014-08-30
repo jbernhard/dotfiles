@@ -182,8 +182,8 @@ bar {
     separator  $base_1
 
     # color class      border  bg      text
-    focused_workspace  $cyan   $cyan   $base2
-    active_workspace   $cyan   $base_3 $base_0
+    focused_workspace  $blue   $blue   $base2
+    active_workspace   $blue   $base_3 $base_0
     inactive_workspace $base_3 $base_3 $base_0
     urgent_workspace   $red    $base_3 $base_0
   }
