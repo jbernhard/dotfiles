@@ -24,7 +24,7 @@ export LESS_TERMCAP_ue=$'\E[0m'
 export LESS_TERMCAP_us=$'\E[01;32m'
 
 # ls colors
-eval `dircolors -b`
+eval `dircolors ~/.dircolors`
 
 # disable flow control
 stty stop undef
