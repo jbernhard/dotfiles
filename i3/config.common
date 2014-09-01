@@ -139,6 +139,9 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
+# floating video player by default
+for_window [class="mpv"] floating enable
+
 # solarized
 set $base_3  #002b36
 set $base_2  #073642
