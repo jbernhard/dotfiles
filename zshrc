@@ -178,16 +178,16 @@ RPROMPT='$(_git_prompt)'
 
 
 # screen hardstatus title
-if [[ "$TERM" == "screen-256color" || "$TERM" == "screen" ]]; then
-  preexec () {
-    if [[ $PWD == $HOME ]]; then
-      dir="~"
-    else
-      dir=${PWD##*/}
-    fi
-    echo -ne "\ek${dir}:${1%% *}\e\\"
-  }
-fi
+#if [[ "$TERM" == "screen-256color" || "$TERM" == "screen" ]]; then
+#  preexec () {
+#    if [[ $PWD == $HOME ]]; then
+#      dir="~"
+#    else
+#      dir=${PWD##*/}
+#    fi
+#    echo -ne "\ek${dir}:${1%% *}\e\\"
+#  }
+#fi
 
 
 
@@ -299,7 +299,7 @@ alias s="screen"
 
 # etc
 alias sx="startx"
-alias cdc='cd && clear && echo -ne "\ekzsh\e\\"'
+alias cdc='cd && clear'
 alias cleantmp="rm -rfv $HOME/tmp/*"
 alias rld="source ~/.zshrc"
 alias k1="killall -1"
