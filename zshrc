@@ -103,23 +103,23 @@ setopt prompt_subst
 
 # set color of username: root or normal user
 if [[ $UID == 0 ]]; then
-  user_color=$fg_no_bold[red]
+  user_color=$fg[red]
 else
-  user_color=$fg_no_bold[blue]
+  user_color=$fg[blue]
 fi
 
 # set color of hostname: local or ssh
 if [[ -n "$SSH_CLIENT" ]]; then
-  host_color=$fg_no_bold[yellow]
+  host_color=$fg[yellow]
 else
-  host_color=$fg_no_bold[blue]
+  host_color=$fg[blue]
 fi
 
 # other colors
-sep_color=$fg_bold[green]
-path_color=$fg_no_bold[blue]
-ret_color=$fg_no_bold[red]
-accent_color=$fg_no_bold[green]
+sep_color=$reset_color
+path_color=$fg[blue]
+ret_color=$fg[red]
+accent_color=$fg[green]
 
 PROMPT="%{$user_color%}%n%{$sep_color%}@%{$host_color%}%m%{$sep_color%}:%{$path_color%}%~ %(?..%{$ret_color%}%? )%{$accent_color%}> %{$reset_color%}"
 
@@ -129,14 +129,14 @@ PROMPT="%{$user_color%}%n%{$sep_color%}@%{$host_color%}%m%{$sep_color%}:%{$path_
 #
 
 # color and symbol settings
-GIT_PROMPT_AHEAD="%{$fg_bold[red]%}+"
-GIT_PROMPT_BEHIND="%{$fg_no_bold[cyan]%}-"
-GIT_PROMPT_MERGING="%{$fg_no_bold[magenta]%}⚡︎"
+GIT_PROMPT_AHEAD="%{$fg[red]%}+"
+GIT_PROMPT_BEHIND="%{$fg[cyan]%}-"
+GIT_PROMPT_MERGING="%{$fg[magenta]%}⚡︎"
 GIT_SYMBOL="▪"
-GIT_PROMPT_UNTRACKED="%{$fg_no_bold[red]%}$GIT_SYMBOL"
-GIT_PROMPT_MODIFIED="%{$fg_no_bold[yellow]%}$GIT_SYMBOL"
-GIT_PROMPT_STAGED="%{$fg_no_bold[green]%}$GIT_SYMBOL"
-GIT_PROMPT_EMPTY="%{$fg_no_bold[blue]%}$GIT_SYMBOL"
+GIT_PROMPT_UNTRACKED="%{$fg[red]%}$GIT_SYMBOL"
+GIT_PROMPT_MODIFIED="%{$fg[yellow]%}$GIT_SYMBOL"
+GIT_PROMPT_STAGED="%{$fg[green]%}$GIT_SYMBOL"
+GIT_PROMPT_EMPTY="%{$fg[blue]%}$GIT_SYMBOL"
 
 
 # find git branch/tag, or name-rev if on detached head
