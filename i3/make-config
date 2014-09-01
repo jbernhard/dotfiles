@@ -1,0 +1,8 @@
+#!/usr/bin/bash
+
+# generate per-host i3 config
+
+cat \
+  config.common \
+  config.$(hostname) \
+  > ~/.config/i3/config
