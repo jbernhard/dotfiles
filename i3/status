@@ -3,8 +3,11 @@
 #
 
 general {
-  colors = true
   interval = 1
+  colors = true
+  color_good = "#268bd2"
+  color_degraded = "#b58900"
+  color_bad = "#dc322f"
 }
 
 order += "cpu_usage"
