@@ -62,7 +62,6 @@
 
 
 ! urxvt
-urxvt.title: urxvt
 urxvt.urgentOnBell: true
 urxvt.visualBell: false
 urxvt.depth: 32
