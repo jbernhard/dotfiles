@@ -6,3 +6,8 @@ cat \
   config.common \
   config.$(hostname) \
   > ~/.config/i3/config
+
+cat \
+  status.common \
+  status.$(hostname) \
+  > ~/.config/i3status/config

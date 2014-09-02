@@ -1,0 +1,5 @@
+
+# settings for affinity
+
+order += "load"
+order += "time"

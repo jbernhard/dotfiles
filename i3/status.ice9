@@ -1,0 +1,19 @@
+
+# settings for ice9
+
+battery 0 {
+  format = "%status %percentage %remaining %consumption"
+  last_full_capacity = true
+  threshold_type = "percentage"
+  low_threshold = 10
+}
+
+wireless wlan0 {
+  format_up = "%essid %quality"
+  format_down = "wifi down"
+}
+
+order += "load"
+order += "wireless wlan0"
+order += "battery 0"
+order += "time"
