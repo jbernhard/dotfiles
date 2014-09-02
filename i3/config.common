@@ -24,7 +24,7 @@ bindsym $mod+b border toggle
 bindsym $mod+Return exec --no-startup-id urxvt
 
 # program launcher
-bindsym $mod+space exec --no-startup-id i3-dmenu-desktop
+bindsym $mod+space exec --no-startup-id j4-dmenu-desktop
 
 # close focused window
 bindsym $mod+Shift+Q kill
