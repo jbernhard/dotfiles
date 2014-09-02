@@ -161,10 +161,10 @@ set $cyan    #2aa198
 set $green   #859900
 
 # color class           border  bg      text    indicator
-client.focused          #4c7899 #285577 #ffffff #2e9ef4
-client.focused_inactive #333333 #5f676a #ffffff #484e50
-client.unfocused        #333333 #222222 #888888 #292d2e
-client.urgent           #2f343a #900000 #ffffff #900000
+client.focused          $blue   $blue   $base2  $blue
+client.focused_inactive $base_2 $base_2 $base2  $blue
+client.unfocused        $base_2 $base_3 $base0  $blue
+client.urgent           $red    $red    $base2  $red   
 
 # status bar
 bar {
@@ -178,8 +178,8 @@ bar {
 
     # color class      border  bg      text
     focused_workspace  $blue   $blue   $base2
-    active_workspace   $blue   $base_3 $base_0
-    inactive_workspace $base_3 $base_3 $base_0
-    urgent_workspace   $red    $base_3 $base_0
+    active_workspace   $blue   $base_3 $base0
+    inactive_workspace $base_3 $base_3 $base0
+    urgent_workspace   $red    $base_3 $base0
   }
 }
