@@ -18,10 +18,7 @@ export LESS='-R -i'
 export LESS_TERMCAP_md=$'\E[34m'        # section headers, etc - blue
 export LESS_TERMCAP_us=$'\E[36m'        # emphasized words - cyan
 export LESS_TERMCAP_so=$'\E[07;33m'     # highlight, e.g. from searching - base color on yellow
-export LESS_TERMCAP_mb=$'\E[31m'        # ??
-export LESS_TERMCAP_me=$'\E[0m'
-export LESS_TERMCAP_ue=$'\E[0m'         # reset
-export LESS_TERMCAP_se=$'\E[0m'
+export LESS_TERMCAP_me=$'\E[0m'         # reset
 
 # ls colors
 eval `dircolors ~/.dircolors`
