@@ -19,21 +19,21 @@ unclutter -idle 4 -jitter 1 -root &
 # host-specific
 case `hostname` in
   affinity)
-    fontsize=9
+    fontsize='9.5'
     xset dpms 180
     redshift &> /dev/null &
     numlockx on
   ;;
 
   ice9)
-    fontsize=10
+    fontsize='11.5'
     xset dpms 180
     redshift &> /dev/null &
     touchpad on
   ;;
 
   serenity)
-    fontsize=12
+    fontsize='13'
     xset -dpms
     xrandr --output HDMI2 --set 'Broadcast RGB' 'Full'
     numlockx on
@@ -43,7 +43,7 @@ esac
 
 # Xresources
 xrdb -merge ~/.Xresources
-xrdb -merge <<< "urxvt.font: xft: Deja Vu Sans Mono-$fontsize"
+xrdb -merge <<< "urxvt.font: xft:monospace:size=$fontsize"
 
 
 # start window manager
