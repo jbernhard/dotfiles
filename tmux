@@ -2,7 +2,35 @@
 # ~/.tmux.conf
 #
 
-set -g default-terminal "screen-256color"
+set-option -g default-terminal "screen-256color"
+
+unbind-key C-b
+set-option -g prefix C-Space
+bind-key C-Space send-prefix
+
+# quick toggle
+bind-key C-space last-window
+
+# vim keybindings
+set-window-option -g mode-keys vi
+bind-key - split-window -v
+bind-key | split-window -h
+bind-key h select-pane -L
+bind-key t select-pane -D
+bind-key n select-pane -U
+bind-key s select-pane -R
+bind-key C-h select-pane -L
+bind-key C-t select-pane -D
+bind-key C-n select-pane -U
+bind-key C-s select-pane -R
+bind-key < resize-pane -L 1
+bind-key > resize-pane -R 1
+bind-key Up resize-pane -D 1
+bind-key Down resize-pane -U 1
+bind-key : command-prompt
+
+# reload config
+bind-key r source-file ~/.tmux.conf
 
 # default statusbar colors
 set-option -g status-bg colour235 #base02
