@@ -81,6 +81,10 @@ bindsym $mod+Shift+space floating toggle
 # change focus between tiling / floating windows
 bindsym $mod+Control+space focus mode_toggle
 
+# scratchpad
+bindsym $mod+grave scratchpad show
+bindsym $mod+Shift+grave move scratchpad
+
 # switch to workspace
 bindsym $mod+1          workspace 1
 bindsym $mod+2          workspace 2
