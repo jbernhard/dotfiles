@@ -9,7 +9,7 @@ set $mod Mod4
 
 # window title font
 # also for bar unless a different font is specified below
-font pango:monospace 9
+font pango:monospace 10.5
 
 # mouse+$mod moves floating windows
 floating_modifier $mod

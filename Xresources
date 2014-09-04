@@ -65,7 +65,7 @@
 urxvt.urgentOnBell: true
 urxvt.visualBell: false
 urxvt.depth: 32
-! urxvt.font -> set in .xinitrc
+urxvt.font: xft:monospace:size=10.5
 urxvt.intensityStyles: false
 urxvt.scrollBar: false
 urxvt.borderColor: S_base03

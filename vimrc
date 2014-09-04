@@ -82,6 +82,8 @@ colorscheme solarized
 
 " gui/terminal-specific
 if has('gui_running')
+  set guifont=monospace\ 10.5
+
   " gui light/dark depending on day/night
   let hour = strftime('%H')
   if hour > 6 && hour < 20
@@ -92,9 +94,6 @@ if has('gui_running')
 
   " toggle light/dark shortcut
   map <F4> :let &background = ( &background == "dark"? "light" : "dark" )<CR>
-
-  " set font size according to hostname
-  execute 'set guifont=monospace\ ' . get({'affinity': '9.5', 'ice9': '11.5', 'serenity': '13'}, hostname(), '10')
 
   " remove gui clutter
   set guioptions-=m   " menubar
