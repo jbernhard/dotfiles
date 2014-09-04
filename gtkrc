@@ -16,7 +16,7 @@ gtk-icon-theme-name = "elementary"
 gtk-theme-name = "numix solarized"
 
 gtk-color-scheme =
-"base_color:#fdf6e3\nbg_color:#eee8d5\ntooltip_bg_color:#002b36\nselected_bg_color:#268bd2\ntext_color:#073642\nfg_color:#586e75\ntooltip_fg_color:#eee8d5\nselected_fg_color:#fdf6e3\nmenubar_bg_color:#002b36\nmenubar_bg_inactive_color:#00151b\nmenubar_fg_color:#dcdcdc\ntoolbar_bg_color:#eee8d5\ntoolbar_fg_color:#586e75\nmenu_bg_color:#002b36\nmenu_fg_color:#dcdcdc\npanel_bg_color:#002b36\npanel_fg_color:#dcdcdc\nlink_color:#fc6f5d"
+"base_color:#fdf6e3\nbg_color:#eee8d5\ntooltip_bg_color:#002b36\nselected_bg_color:#268bd2\ntext_color:#073642\nfg_color:#586e75\ntooltip_fg_color:#eee8d5\nselected_fg_color:#fdf6e3\nmenubar_bg_color:#002b36\nmenubar_fg_color:#dcdcdc\ntoolbar_bg_color:#eee8d5\ntoolbar_fg_color:#586e75\nmenu_bg_color:#002b36\nmenu_fg_color:#dcdcdc\npanel_bg_color:#002b36\npanel_fg_color:#dcdcdc\nlink_color:#fc6f5d"
 
 # default style
 
@@ -526,13 +526,13 @@ style "chromium-toolbar-button" {
 
 style "chrome-gtk-frame" {
 	ChromeGtkFrame::frame-color = @menubar_bg_color
-	ChromeGtkFrame::inactive-frame-color = @menubar_bg_inactive_color
+	ChromeGtkFrame::inactive-frame-color = darker(@menubar_bg_color)
 
 	ChromeGtkFrame::frame-gradient-size = 0
 	ChromeGtkFrame::frame-gradient-color = @menubar_bg_color
 
 	ChromeGtkFrame::incognito-frame-color = @menubar_bg_color
-	ChromeGtkFrame::incognito-inactive-frame-color = @menubar_bg_inactive_color
+	ChromeGtkFrame::incognito-inactive-frame-color = darker(@menubar_bg_color)
 
 	ChromeGtkFrame::incognito-frame-gradient-size = 0
 	ChromeGtkFrame::incognito-frame-gradient-color = @menubar_bg_color
