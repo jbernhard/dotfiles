@@ -31,6 +31,7 @@ Plugin 'hynek/vim-python-pep8-indent'
 Plugin 'a.vim'
 Plugin 'freitass/todo.txt-vim'
 Plugin 'vhdirk/vim-cmake'
+Plugin 'PotatoesMaster/i3-vim-syntax'
 
 call vundle#end()
 
