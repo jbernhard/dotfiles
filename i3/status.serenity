@@ -1,0 +1,5 @@
+
+# settings for serenity
+
+order += "load"
+order += "time"
