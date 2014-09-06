@@ -1,3 +1,4 @@
 
 # settings for serenity
 
+bindsym XF86HomePage exec xbmc
