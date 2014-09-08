@@ -90,6 +90,9 @@ bindsym XF86AudioRaiseVolume exec --no-startup-id amixer set Master 1%+
 bindsym XF86AudioLowerVolume exec --no-startup-id amixer set Master 1%-
 bindsym XF86AudioMute exec --no-startup-id amixer set Master toggle
 
+# suspend
+bindsym XF86Sleep exec --no-startup-id systemctl suspend
+
 # switch to workspace
 bindsym $mod+1          workspace 1
 bindsym $mod+2          workspace 2
