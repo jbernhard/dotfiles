@@ -83,7 +83,7 @@ colorscheme solarized
 
 " gui/terminal-specific
 if has('gui_running')
-  set guifont=monospace\ 10.5
+  set guifont=monospace\ 13
 
   " gui light/dark depending on day/night
   let hour = strftime('%H')
