@@ -1,0 +1,11 @@
+[Unit]
+Description=daily timer
+
+[Timer]
+OnCalendar=daily
+AccuracySec=12 hours
+Persistent=true
+Unit=timer-daily.target
+
+[Install]
+WantedBy=default.target
