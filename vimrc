@@ -94,7 +94,7 @@ if has('gui_running')
   endif
 
   " toggle light/dark shortcut
-  map <F4> :let &background = ( &background == "dark"? "light" : "dark" )<CR>
+  call togglebg#map("<F4>")
 
   " remove gui clutter
   set guioptions-=m   " menubar
