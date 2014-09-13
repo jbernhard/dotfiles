@@ -93,6 +93,9 @@ bindsym XF86AudioMute exec --no-startup-id amixer set Master toggle
 # suspend
 bindsym XF86Sleep exec --no-startup-id systemctl suspend
 
+# screenshot
+bindsym Print exec --no-startup-id scrot '/tmp/screenshot_%F_%T_$wx$h.png'
+
 # switch to workspace
 bindsym $mod+1          workspace 1
 bindsym $mod+2          workspace 2
