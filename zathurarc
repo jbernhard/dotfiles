@@ -1,0 +1,21 @@
+#
+# ~/.config/zathura/zathurarc
+#
+
+set font "monospace 13"
+
+set default-bg "#002b36"
+#set default-fg "#"
+set statusbar-bg "#073642"
+set statusbar-fg "#93a1a1"
+set index-bg "#002b36"
+set index-fg "#93a1a1"
+set index-active-bg "#268bd2"
+set index-active-fg "#eee8d5"
+
+#map h scroll left
+#map t scroll down
+#map n scroll up
+#map s scroll right
+#map T navigate down
+#map N navigate up
