@@ -12,6 +12,8 @@ set index-bg "#002b36"
 set index-fg "#93a1a1"
 set index-active-bg "#268bd2"
 set index-active-fg "#eee8d5"
+set recolor-darkcolor "#657b83"
+set recolor-lightcolor "#fdf6e3"
 
 #map h scroll left
 #map t scroll down
