@@ -113,8 +113,7 @@ else
 endif
 
 " save views automatically
-" suggest a cron job to run e.g.
-" find $HOME/.vim/view -type f -mtime +7 -delete
+" enable clear-old-files.service systemd user service to automatically clean old view files
 autocmd BufWinLeave * if expand("%") != "" | mkview | endif
 autocmd BufWinEnter * if expand("%") != "" | loadview | endif
 
