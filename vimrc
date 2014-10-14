@@ -127,6 +127,7 @@ autocmd BufNewFile,BufReadPost *.md set filetype=markdown
 let g:ycm_global_ycm_extra_conf = '~/.vim/ycm_extra_conf.py'
 let g:ycm_always_populate_location_list = 1
 let g:ycm_filetype_blacklist = {'markdown': 1, 'tex': 1, 'text': 1}
+let g:ycm_autoclose_preview_window_after_insertion = 1
 
 " ensure latex-suite is loaded
 let g:tex_flavor='latex'
