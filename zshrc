@@ -315,12 +315,13 @@ alias fehh="feh -FZY"
 alias py="ipython"
 alias pyqt="ipython qtconsole"
 alias pynb="ipython notebook"
-alias nose="nosetests3 --with-coverage"
+alias nose="nosetests --verbose"
 alias g++11="g++ -std=c++11"
 alias cpplint="cpplint --extensions=cxx,h --linelength=110"
 
 function ok () { okular $@ &> /dev/null & }
 function g_clone () { git clone git@github.com:jbernhard/$1.git $2 }
+function nose_cover () { nose --with-coverage --cover-package=$1 }
 
 
 # local settings
