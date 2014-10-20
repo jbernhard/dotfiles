@@ -88,6 +88,8 @@ zstyle ':completion:*:killall:*' command 'ps -u $USER -o cmd | tail -n +2'
 
 zstyle ':completion:*:cd:*' ignore-parents parent pwd   # ignore parent dir for cd completion
 
+[[ -f ~/.travis/travis.sh ]] && . ~/.travis/travis.sh
+
 
 #
 # prompt
