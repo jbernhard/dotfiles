@@ -21,6 +21,8 @@
 	l = log
 	dc = diff --cached
 	h = help
+	lol = log --graph --decorate --pretty=oneline --abbrev-commit
+	lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
 [grep]
 	lineNumber = true
 [push]
