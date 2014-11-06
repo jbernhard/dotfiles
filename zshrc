@@ -323,7 +323,7 @@ alias cpplint="cpplint --extensions=cxx,h --linelength=110"
 
 function ok () { okular $@ &> /dev/null & }
 function g_clone () { git clone git@github.com:jbernhard/$1.git $2 }
-function nose_cover () { nose --with-coverage --cover-package=$1 }
+function nose_cover () { nose --with-coverage --cover-erase --cover-package=$1 }
 
 
 # local settings
