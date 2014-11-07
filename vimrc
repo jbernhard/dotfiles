@@ -114,8 +114,8 @@ endif
 
 " save views automatically
 " enable clear-old-files.service systemd user service to automatically clean old view files
-autocmd BufWinLeave * if expand("%") != "" | mkview | endif
-autocmd BufWinEnter * if expand("%") != "" | loadview | endif
+autocmd BufWinLeave * if expand("%") != "" && &ft != 'gitcommit' | mkview | endif
+autocmd BufWinEnter * if expand("%") != "" && &ft != 'gitcommit' | loadview | endif
 
 " markdown file extension
 autocmd BufNewFile,BufReadPost *.md set filetype=markdown
