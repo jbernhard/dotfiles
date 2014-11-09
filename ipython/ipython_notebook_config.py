@@ -371,7 +371,7 @@ c = get_config()
 # it is not applied if there are no more arguments on the line, and '2' for
 # 'full' autocall, where all callable objects are automatically called (even if
 # no arguments are present).
-# c.ZMQInteractiveShell.autocall = 0
+c.ZMQInteractiveShell.autocall = 1
 
 # 
 # c.ZMQInteractiveShell.separate_in = '\n'
