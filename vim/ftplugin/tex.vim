@@ -6,6 +6,17 @@
 " spellcheck on by default
 setlocal spell spelllang=en_us
 
+" soft line wrap
+setlocal wrap
+setlocal linebreak
+setlocal nolist
+setlocal textwidth=0
+setlocal wrapmargin=0
+noremap t gj
+noremap n gk
+noremap - g$
+noremap _ g^
+
 
 "
 " latex-suite settings
