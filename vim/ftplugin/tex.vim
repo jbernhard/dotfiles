@@ -52,9 +52,9 @@ vmap <C-space> <Plug>IMAP_JumpForward
 imap <C-space> <Plug>IMAP_JumpForward
 
 " new refresh folds shortcut
-nmap <C-S-F> <Plug>Tex_RefreshFolds
-vmap <C-S-F> <Plug>Tex_RefreshFolds
-imap <C-S-F> <Plug>Tex_RefreshFolds
+"nmap <C-S-F> <Plug>Tex_RefreshFolds
+"vmap <C-S-F> <Plug>Tex_RefreshFolds
+"imap <C-S-F> <Plug>Tex_RefreshFolds
 
 " shortcuts for \bigl( .. \bigr), etc
 call IMAP('big(', '\bigl( <++> \bigr) <++>', 'tex')
