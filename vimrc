@@ -28,6 +28,7 @@ Plugin 'nvie/vim-flake8'
 Plugin 'hynek/vim-python-pep8-indent'
 "Plugin 'davidhalter/jedi-vim'
 "Plugin 'scrooloose/syntastic'
+Plugin 'scrooloose/nerdcommenter'
 Plugin 'a.vim'
 Plugin 'freitass/todo.txt-vim'
 Plugin 'vhdirk/vim-cmake'
@@ -139,6 +140,9 @@ let g:gist_open_browser_after_post = 1
 let g:gist_show_privates = 1
 let g:gist_post_private = 1
 let g:gist_update_on_write = 2
+
+" nerd commenter
+let g:NERDSpaceDelims = 1
 
 " syntastic settings
 "let g:syntastic_cpp_check_header = 1
