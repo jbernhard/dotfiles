@@ -1,25 +1,5 @@
 "
-" ~/.vim/ftplugin/tex.vim
-"
-
-
-" spellcheck on by default
-setlocal spell spelllang=en_us
-
-" soft line wrap
-setlocal wrap
-setlocal linebreak
-setlocal nolist
-setlocal textwidth=0
-setlocal wrapmargin=0
-noremap t gj
-noremap n gk
-noremap - g$
-noremap _ g^
-
-
-"
-" latex-suite settings
+" latex-suite
 "
 
 " needed for completion
@@ -29,28 +9,11 @@ setlocal grepprg=grep\ -nH\ $*
 setlocal iskeyword+=:
 
 " compile to pdf
-let g:Tex_UseEditorSettingInDVIViewer = 1
 let g:Tex_DefaultTargetFormat = 'pdf'
+let g:Tex_CompileRule_pdf	= 'make'
 
 " view in okular
-let g:Tex_ViewRule_dvi = 'okular'
-let g:Tex_ViewRule_ps = 'okular'
 let g:Tex_ViewRule_pdf = 'okular'
-
-" uncomment these for dvi > ps > pdf
-"let g:Tex_FormatDependency_pdf = 'dvi,ps,pdf'
-"let g:Tex_CompileRule_dvi	= 'latex -interaction nonstopmode -synctex=1 $*'
-"let g:Tex_CompileRule_ps = 'dvips $*.dvi'
-"let g:Tex_CompileRule_pdf = 'ps2pdf $*.ps'
-
-" uncomment these for pdflatex
-let g:Tex_MultipleCompileFormats = 'pdf'
-"let g:Tex_CompileRule_pdf	= 'pdflatex -interaction nonstopmode -synctex=1 -shell-escape $*'
-let g:Tex_CompileRule_pdf	= 'compilelatex %:r'
-
-" compile & view shortcuts
-"no <F12> :w<CR>:call Tex_RunLaTeX()<CR>
-"noremap <buffer> <F12> :w<CR>:!compilelatex '%:r'<CR>
 noremap <buffer> <F10> :call Tex_ForwardSearchLaTeX()<CR>
 noremap <buffer> <S-F10> :call Tex_ViewLaTeX()<CR>
 
@@ -58,14 +21,9 @@ noremap <buffer> <S-F10> :call Tex_ViewLaTeX()<CR>
 noremap <buffer> <F9> :w<CR>:!texcount %<CR>
 
 " new jump shortcut
-nmap <C-space> <Plug>IMAP_JumpForward
-vmap <C-space> <Plug>IMAP_JumpForward
-imap <C-space> <Plug>IMAP_JumpForward
-
-" new refresh folds shortcut
-"nmap <C-S-F> <Plug>Tex_RefreshFolds
-"vmap <C-S-F> <Plug>Tex_RefreshFolds
-"imap <C-S-F> <Plug>Tex_RefreshFolds
+nmap <buffer> <C-space> <Plug>IMAP_JumpForward
+vmap <buffer> <C-space> <Plug>IMAP_JumpForward
+imap <buffer> <C-space> <Plug>IMAP_JumpForward
 
 " shortcuts for \bigl( .. \bigr), etc
 call IMAP('big(', '\bigl( <++> \bigr) <++>', 'tex')
@@ -84,14 +42,6 @@ call IMAP('big|', '\bigl| <++> \bigr| <++>', 'tex')
 call IMAP('Big|', '\Bigl| <++> \Bigr| <++>', 'tex')
 call IMAP('bigg|', '\biggl| <++> \biggr| <++>', 'tex')
 call IMAP('Bigg|', '\Biggl| <++> \Biggr| <++>', 'tex')
-
-" other shortcuts
-function! Tex_Unit()
-  return IMAP_PutTextWithMovement('\unit{<++>}<++>')
-endfunction
-
-"imap <M-u> <Plug>Tex_Unit
-"call Tex_MakeMap('<M-u>', '<Plug>Tex_Unit', 'i', '<buffer> <silent>')
 
 " don't autofold
 let g:Tex_AutoFolding = 0
