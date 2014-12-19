@@ -2,6 +2,7 @@
 # ~/.latexmkrc
 #
 
+$pdflatex = 'pdflatex -halt-on-error %O %S';
 $pdf_mode = 1;
 $pdf_previewer = 'start okular %O %S &> /dev/null';
 $pdf_update_method = 0;
