@@ -1,4 +1,4 @@
 
 # settings for serenity
 
-bindsym XF86HomePage exec xbmc
+bindsym XF86HomePage exec kodi
