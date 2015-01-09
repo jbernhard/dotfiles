@@ -164,6 +164,9 @@ map <F11> :setlocal spell! spelllang=en_us<CR>
 " make shortcut
 map <Leader>m :update<CR>:make<CR>
 
+" taglist
+map <Leader>t :TlistToggle<CR>
+
 " :W = :w
 cmap W<CR> w<CR>
 
