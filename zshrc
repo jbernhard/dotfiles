@@ -274,6 +274,7 @@ alias -g cpa="cp -a"
 alias -g cpav="cp -av"
 alias -g mvv="mv -v"
 alias -g rmr="rm -rf"
+alias mmv="noglob zmv -W"
 alias rcp="rsync -avhP"
 alias rcpd="rsync -avhP --delete-after"
 
