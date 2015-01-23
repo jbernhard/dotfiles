@@ -100,17 +100,21 @@ bindsym Print exec --no-startup-id scrot '/tmp/screenshot_%F_%T_$wx$h.png'
 bindsym $mod+1          workspace 1
 bindsym $mod+2          workspace 2
 bindsym $mod+3          workspace 3
-bindsym $mod+apostrophe workspace "4:'"
-bindsym $mod+comma      workspace "5:,"
-bindsym $mod+period     workspace "6:."
+bindsym $mod+4          workspace 4
+bindsym $mod+apostrophe workspace "5:'"
+bindsym $mod+comma      workspace "6:,"
+bindsym $mod+period     workspace "7:."
+bindsym $mod+p          workspace "8:p"
 
 # move focused container to workspace
 bindsym $mod+Shift+1        move container to workspace 1
 bindsym $mod+Shift+2        move container to workspace 2
 bindsym $mod+Shift+3        move container to workspace 3
-bindsym $mod+Shift+quotedbl move container to workspace "4:'"
-bindsym $mod+Shift+less     move container to workspace "5:,"
-bindsym $mod+Shift+greater  move container to workspace "6:."
+bindsym $mod+Shift+4        move container to workspace 4
+bindsym $mod+Shift+quotedbl move container to workspace "5:'"
+bindsym $mod+Shift+less     move container to workspace "6:,"
+bindsym $mod+Shift+greater  move container to workspace "7:."
+bindsym $mod+Shift+P        move container to workspace "8:p"
 
 # toggle workspaces
 workspace_auto_back_and_forth yes
