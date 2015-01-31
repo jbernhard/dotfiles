@@ -27,7 +27,7 @@ unclutter -idle 4 -jitter 1 -root &
 
 
 # host-specific
-case `hostname` in
+case $(</etc/hostname) in
   affinity)
     xset dpms 180
     redshift &> /dev/null &
