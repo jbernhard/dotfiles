@@ -21,7 +21,7 @@ hide_edge_borders both
 bindsym $mod+b border toggle
 
 # start a terminal
-bindsym $mod+Return exec --no-startup-id urxvt
+bindsym $mod+Return exec --no-startup-id urxvtc
 
 # program launcher
 bindsym $mod+space exec --no-startup-id j4-dmenu-desktop
