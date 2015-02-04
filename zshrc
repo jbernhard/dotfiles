@@ -292,7 +292,7 @@ alias updategrub="sudo grub-mkconfig -o /boot/grub/grub.cfg"
 
 # single letter commands
 alias c='clear'
-alias g="git"
+alias g="hub"
 alias q="exit"
 alias s="screen"
 
@@ -324,7 +324,6 @@ alias cpplint="cpplint --extensions=cxx,h --linelength=110"
 
 function ok () { okular $@ &> /dev/null & }
 function za () { zathura $@ &> /dev/null & }
-function g_clone () { git clone git@github.com:jbernhard/$1.git $2 }
 function nose_cover () { nose --with-coverage --cover-erase --cover-package=$1 }
 function nose_cov () { nose --with-cov --cov-report term-missing --cov=$1 }
 function bf () {awk '/btrfs/ {print $2}' /proc/mounts | while read mnt; do echo $mnt; btrfs filesystem df $@ $mnt; echo; done}
