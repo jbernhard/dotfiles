@@ -42,7 +42,7 @@ filetype plugin indent on
 syntax on
 
 set number
-set textwidth=110
+set textwidth=80
 set tabstop=2
 set softtabstop=2
 set shiftwidth=2
