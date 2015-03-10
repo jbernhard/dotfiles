@@ -33,6 +33,7 @@ Plugin 'a.vim'
 Plugin 'freitass/todo.txt-vim'
 Plugin 'vhdirk/vim-cmake'
 Plugin 'PotatoesMaster/i3-vim-syntax'
+Plugin 'ntpeters/vim-better-whitespace'
 
 call vundle#end()
 
@@ -143,6 +144,9 @@ let g:gist_update_on_write = 2
 
 " nerd commenter
 let g:NERDSpaceDelims = 1
+
+" whitespace
+let g:better_whitespace_filetypes_blacklist= ['gitcommit']
 
 " syntastic settings
 "let g:syntastic_cpp_check_header = 1
