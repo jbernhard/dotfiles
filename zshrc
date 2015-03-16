@@ -320,6 +320,8 @@ alias pyqt="ipython qtconsole"
 alias pynb="ipython notebook"
 alias nose="nosetests --verbose"
 alias g++11="g++ -std=c++11"
+alias g++o="g++ -std=c++11 -O3 -DNDEBUG -march=native -Wall -Wextra -Wpedantic"
+alias g++d="g++ -std=c++11 -Og -g -march=native -Wall -Wextra -Wpedantic"
 alias cpplint="cpplint --extensions=cxx,h --linelength=110"
 
 function ok () { okular $@ &> /dev/null & }
