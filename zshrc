@@ -322,6 +322,8 @@ alias nose="nosetests --verbose"
 alias g++11="g++ -std=c++11"
 alias g++o="g++ -std=c++11 -O3 -DNDEBUG -march=native -Wall -Wextra -Wpedantic"
 alias g++d="g++ -std=c++11 -Og -g -march=native -Wall -Wextra -Wpedantic"
+alias cmakerel="cmake -DCMAKE_BUILD_TYPE=Release"
+alias cmakedeb="cmake -DCMAKE_BUILD_TYPE=Debug"
 alias cpplint="cpplint --extensions=cxx,h --linelength=110"
 
 function ok () { okular $@ &> /dev/null & }
