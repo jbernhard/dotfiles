@@ -11,6 +11,9 @@ path=(~/bin ~/.local/bin $(ruby -rubygems -e "puts Gem.user_dir")/bin $path)
 export EDITOR=vim
 export BROWSER=chromium
 
+# default parallel make
+export MAKEFLAGS="-j$(nproc)"
+
 # default less options
 export LESS='-R -i'
 
