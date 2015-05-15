@@ -283,8 +283,8 @@ alias rcpd="rsync -avhP --delete-after"
 
 # sysadmin
 alias -g p="pacman"
-alias -g pa="packer"
-alias syu="packer -Syu"
+alias -g pa="pacaur"
+alias syu="pacaur -Syu"
 alias -g sc="systemctl"
 alias sd="systemctl poweroff"
 alias rb="systemctl reboot"
