@@ -23,7 +23,7 @@ urxvtd --quiet --fork --opendisplay
 unclutter -idle 4 -jitter 1 -root &
 
 # wallpaper
-[[ -f ~/.fehbg ]] && eval `<~/.fehbg`
+[[ -x ~/.fehbg ]] && ~/.fehbg
 
 
 # host-specific
