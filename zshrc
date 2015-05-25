@@ -290,8 +290,8 @@ alias sd="systemctl poweroff"
 alias rb="systemctl reboot"
 alias sp="systemctl suspend"
 alias -g jc="journalctl"
-alias updatemirrorlist="sudo reflector --country 'United States' --protocol http --age 12 --sort rate --verbose --save /etc/pacman.d/mirrorlist"
-alias updategrub="sudo grub-mkconfig -o /boot/grub/grub.cfg"
+alias update-mirrorlist="sudo reflector --country 'United States' --protocol http --age 12 --sort rate --verbose --save /etc/pacman.d/mirrorlist"
+alias update-grub="sudo grub-mkconfig -o /boot/grub/grub.cfg"
 
 # single letter commands
 alias c='clear'
