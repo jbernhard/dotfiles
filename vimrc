@@ -74,22 +74,15 @@ set backupdir^=$HOME/.vim/tmp//
 " extended matching
 runtime! macros/matchit.vim
 
-
+" solarized dark colors
 colorscheme solarized
+set background=dark
 
 " gui/terminal-specific
 if has('gui_running')
   set guifont=monospace\ 13
 
-  " gui light/dark depending on day/night
-  let hour = strftime('%H')
-  if hour > 6 && hour < 20
-    set background=light
-  else
-    set background=dark
-  endif
-
-  " toggle light/dark shortcut
+  " shortcut to toggle light/dark solarized
   call togglebg#map("<F4>")
 
   " remove gui clutter
@@ -103,9 +96,6 @@ if has('gui_running')
 
   " disable alt-key access to menus
   set winaltkeys=no
-else
-  " always dark in terminal
-  set background=dark
 endif
 
 " save views automatically
