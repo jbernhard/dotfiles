@@ -14,23 +14,17 @@ call vundle#begin()
 
 Plugin 'gmarik/Vundle.vim'
 Plugin 'taglist.vim'
-"Plugin 'ervandew/supertab'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'Valloric/ListToggle'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-surround'
-Plugin 'twerth/ir_black'
 Plugin 'altercation/vim-colors-solarized'
-Plugin 'chriskempson/base16-vim'
 Plugin 'mattn/webapi-vim'
 Plugin 'mattn/gist-vim'
 Plugin 'nvie/vim-flake8'
 Plugin 'hynek/vim-python-pep8-indent'
-"Plugin 'davidhalter/jedi-vim'
-"Plugin 'scrooloose/syntastic'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'a.vim'
-Plugin 'freitass/todo.txt-vim'
 Plugin 'vhdirk/vim-cmake'
 Plugin 'PotatoesMaster/i3-vim-syntax'
 Plugin 'ntpeters/vim-better-whitespace'
@@ -122,9 +116,6 @@ autocmd BufWinEnter * if expand('%') != '' && expand('%') !~ '^fugitive' && &ft 
 " markdown file extension
 autocmd BufNewFile,BufReadPost *.md set filetype=markdown
 
-" omni completion
-"set omnifunc=syntaxcomplete#Complete
-
 " youcompleteme settings
 let g:ycm_global_ycm_extra_conf = '~/.vim/ycm_extra_conf.py'
 let g:ycm_always_populate_location_list = 1
@@ -147,10 +138,6 @@ let g:NERDSpaceDelims = 1
 
 " whitespace
 let g:better_whitespace_filetypes_blacklist = ['gitcommit']
-
-" syntastic settings
-"let g:syntastic_cpp_check_header = 1
-"let g:syntastic_cpp_compiler_options = '-std=c++11'
 
 "
 " keyboard
