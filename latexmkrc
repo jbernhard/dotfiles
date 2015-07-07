@@ -2,7 +2,7 @@
 # ~/.latexmkrc
 #
 
-$pdflatex = 'pdflatex -halt-on-error %O %S';
+$pdflatex = 'pdflatex -halt-on-error -shell-escape %O %S';
 $pdf_mode = 1;
 $pdf_previewer = 'start okular %O %S &> /dev/null';
 $pdf_update_method = 0;
