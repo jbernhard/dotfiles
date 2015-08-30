@@ -239,7 +239,7 @@ bindkey -sM vicmd '_' '\^'
 alias ls="ls -ph --color=always --group-directories-first"
 alias top="top -d 1 -H"
 alias ps="ps -e"
-alias grep="grep --color=always -i"
+alias grep="grep --color=auto"
 alias locate="locate -i"
 alias df="df -h"
 alias di="di -I ext4,btrfs -f SMbuvpt -H -t"
