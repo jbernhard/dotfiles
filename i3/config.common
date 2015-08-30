@@ -158,8 +158,9 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
-# floating video player by default
+# default floating windows
 for_window [class="mpv"] floating enable
+for_window [class="Amarok"] floating enable
 
 # solarized
 set $base_3  #002b36
