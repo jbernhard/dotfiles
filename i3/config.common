@@ -184,7 +184,7 @@ set $green   #859900
 client.focused          $blue   $blue   $base2  $blue
 client.focused_inactive $base_2 $base_2 $base2  $blue
 client.unfocused        $base_2 $base_3 $base0  $blue
-client.urgent           $red    $red    $base2  $red   
+client.urgent           $red    $red    $base2  $red
 
 # status bar
 bar {
