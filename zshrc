@@ -58,6 +58,9 @@ HISTFILE=~/.zsh_history
 HISTSIZE=2000
 SAVEHIST=2000
 
+# default command for a single input redirection
+READNULLCMD=less
+
 # zle modules
 autoload -U zcalc zargs zmv
 
