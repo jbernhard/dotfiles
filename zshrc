@@ -59,7 +59,10 @@ HISTSIZE=2000
 SAVEHIST=2000
 
 # default command for a single input redirection
-READNULLCMD=less
+lessxf () {
+  less -XF $@
+}
+READNULLCMD=lessxf
 
 # zle modules
 autoload -U zcalc zargs zmv
