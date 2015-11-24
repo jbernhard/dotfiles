@@ -80,7 +80,7 @@ backend      : qt5agg
 # information on line properties.
 #lines.linewidth   : 1.0     # line width in points
 #lines.linestyle   : -       # solid line
-#lines.color       : blue    # has no affect on plot(); see axes.color_cycle
+#lines.color       : blue    # has no affect on plot(); see axes.prop_cycle
 #lines.marker      : None    # the default marker
 #lines.markeredgewidth  : 0.5     # the line width around the marker symbol
 #lines.markersize  : 6            # markersize, in points
@@ -89,6 +89,8 @@ backend      : qt5agg
 #lines.solid_joinstyle : miter       # miter|round|bevel
 #lines.solid_capstyle : projecting   # butt|round|projecting
 #lines.antialiased : True         # render lines in antialised (no jaggies)
+
+#markers.fillstyle: full # full|left|right|bottom|top|none
 
 ### PATCHES
 # Patches are graphical objects that fill 2D space, like polygons or
@@ -136,7 +138,7 @@ backend      : qt5agg
 # The font.size property is the default font size for text, given in pts.
 # 12pt is the standard value.
 #
-font.family         : Lato
+#font.family         : sans-serif
 #font.style          : normal
 #font.variant        : normal
 #font.weight         : medium
@@ -147,12 +149,10 @@ font.family         : Lato
 # relative to font.size, using the following values: xx-small, x-small,
 # small, medium, large, x-large, xx-large, larger, or smaller
 #font.size           : 12.0
-#font.serif          : Bitstream Vera Serif, New Century Schoolbook, Century Schoolbook L, Utopia, ITC Bookman, Bookman, Nimbus Roman No9 L, Times New Roman, Times, Palatino, Charter, serif
-#font.sans-serif     : Bitstream Vera Sans, Lucida Grande, Verdana, Geneva, Lucid, Arial, Helvetica, Avant Garde, sans-serif
-font.serif          : serif
-font.sans-serif     : sans-serif
-#font.cursive        : Apple Chancery, Textile, Zapf Chancery, Sand, cursive
-#font.fantasy        : Comic Sans MS, Chicago, Charcoal, Impact, Western, fantasy
+font.serif          : CMU Serif, Bitstream Vera Serif, New Century Schoolbook, Century Schoolbook L, Utopia, ITC Bookman, Bookman, Nimbus Roman No9 L, Times New Roman, Times, Palatino, Charter, serif
+font.sans-serif     : Lato, Bitstream Vera Sans, Lucida Grande, Verdana, Geneva, Lucid, Arial, Helvetica, Avant Garde, sans-serif
+#font.cursive        : Apple Chancery, Textile, Zapf Chancery, Sand, Script MT, Felipa, cursive
+#font.fantasy        : Comic Sans MS, Chicago, Charcoal, Impact, Western, Humor Sans, fantasy
 #font.monospace      : Bitstream Vera Sans Mono, Andale Mono, Nimbus Mono L, Courier New, Courier, Fixed, Terminal, monospace
 
 ### TEXT
@@ -162,7 +162,7 @@ font.sans-serif     : sans-serif
 
 text.color          : 262626
 
-### LaTeX customizations. See http://www.scipy.org/Wiki/Cookbook/Matplotlib/UsingTex
+### LaTeX customizations. See http://wiki.scipy.org/Cookbook/Matplotlib/UsingTex
 #text.usetex         : False  # use latex for all text handling. The following fonts
                               # are supported through the usual rc parameter settings:
                               # new century schoolbook, bookman, times, palatino,
@@ -243,6 +243,7 @@ axes.linewidth      : 0.5      # edge linewidth
 #axes.grid           : False   # display grid or not
 #axes.titlesize      : large   # fontsize of the axes title
 #axes.labelsize      : medium  # fontsize of the x any y labels
+#axes.labelpad       : 5.0     # space between label and axis
 #axes.labelweight    : normal  # weight of the x and y labels
 axes.labelcolor     : 262626
 #axes.axisbelow      : False   # whether axis gridlines and ticks are below
@@ -266,11 +267,11 @@ axes.formatter.use_mathtext : True # When True, use mathtext for scientific
 #axes.unicode_minus  : True    # use unicode for the minus symbol
                                # rather than hyphen.  See
                                # http://en.wikipedia.org/wiki/Plus_and_minus_signs#Character_codes
-# color cycle for plot lines
-# as list of string colorspecs:
-# single letter, long name, or
-# web-style hex
-axes.color_cycle    : 2e7ebc, 2f974e, e25508, 7262ac, 5f5f5f
+axes.prop_cycle    : cycler('color', ['2e7ebc', '2f974e', 'e25508', '7262ac', '5f5f5f'])
+                                            # color cycle for plot lines
+                                            # as list of string colorspecs:
+                                            # single letter, long name, or
+                                            # web-style hex
 #axes.xmargin        : 0  # x margin.  See `axes.Axes.margins`
 #axes.ymargin        : 0  # y margin See `axes.Axes.margins`
 
@@ -354,9 +355,17 @@ image.cmap   : Blues               # gray | jet etc...
 #image.lut    : 256               # the size of the colormap lookup table
 #image.origin : upper             # lower | upper
 #image.resample  : False
+#image.composite_image : True     # When True, all the images on a set of axes are
+                                  # combined into a single composite image before
+                                  # saving a figure as a vector graphics file,
+                                  # such as a PDF.
 
 ### CONTOUR PLOTS
-#contour.negative_linestyle :  dashed # dashed | solid
+#contour.negative_linestyle : dashed # dashed | solid
+#contour.corner_mask        : True   # True | False | legacy
+
+### ERRORBAR PLOTS
+#errorbar.capsize : 3             # length of end cap on error bars in pixels
 
 ### Agg rendering
 ### Warning: experimental, 2008/10/10
@@ -476,6 +485,9 @@ pdf.fonttype       : 42         # Output Type 3 (Type3) or Type 42 (TrueType)
 #examples.directory : ''   # directory to look in for custom installation
 
 ###ANIMATION settings
+#animation.html : 'none'           # How to display the animation as HTML in
+                                   # the IPython notebook. 'html5' uses
+                                   # HTML5 video tag.
 #animation.writer : ffmpeg         # MovieWriter 'backend' to use
 #animation.codec : mpeg4           # Codec to use for writing movie
 #animation.bitrate: -1             # Controls size/quality tradeoff for movie.

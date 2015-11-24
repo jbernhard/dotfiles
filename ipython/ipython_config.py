@@ -552,5 +552,24 @@ c.TerminalInteractiveShell.autocall = 1
 # InlineBackend configuration
 #------------------------------------------------------------------------------
 
+from cycler import cycler
+
 c.InlineBackend.figure_formats = {'retina'}
-c.InlineBackend.rc = {'figure.figsize': (16.18, 10.00), 'figure.autolayout': False, 'lines.linewidth': 2, 'font.size': 14, 'figure.facecolor': '#fdf6e3', 'axes.facecolor': '#fdf6e3', 'text.color': '#839496', 'axes.edgecolor': '#839496', 'axes.labelcolor': '#839496', 'xtick.color': '#839496', 'ytick.color': '#839496', 'xtick.major.size': 3, 'ytick.major.size': 3, 'axes.color_cycle': ['#268bd2', '#2aa198', '#859900', '#b58900', '#cb4b16', '#dc322f', '#d33682', '#6c71c4', '#586e75']}
+c.InlineBackend.rc = {
+    'figure.figsize': (16.18, 10.00),
+    'figure.autolayout': False,
+    'lines.linewidth': 2,
+    'font.size': 14,
+    'figure.facecolor': '#fdf6e3',
+    'axes.facecolor': '#fdf6e3',
+    'text.color': '#839496',
+    'axes.edgecolor': '#839496',
+    'axes.labelcolor': '#839496',
+    'xtick.color': '#839496',
+    'ytick.color': '#839496',
+    'xtick.major.size': 3,
+    'ytick.major.size': 3,
+    'axes.prop_cycle': cycler('color', ['#268bd2', '#2aa198', '#859900',
+                                        '#b58900', '#cb4b16', '#dc322f',
+                                        '#d33682', '#6c71c4', '#586e75']),
+}
