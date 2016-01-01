@@ -28,6 +28,8 @@ Plugin 'a.vim'
 Plugin 'vhdirk/vim-cmake'
 Plugin 'PotatoesMaster/i3-vim-syntax'
 Plugin 'ntpeters/vim-better-whitespace'
+Plugin 'mitsuhiko/vim-jinja'
+Plugin 'mattn/emmet-vim'
 
 call vundle#end()
 
