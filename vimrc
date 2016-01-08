@@ -51,8 +51,6 @@ set viminfo='100,f1
 set hlsearch
 set incsearch
 set wildmode=list:longest,full
-set wildignore=*.log,*.aux,*.dvi,*.aut,*.aux,*.bbl,*.blg,*.dvi,*.end,*.fff,*.log,*.out,*.pdf,*.ps,*.toc,*.ttt,*.synctex.gz,*.table,*.gnuplot,*.snm,*.nav,*.nb
-set autochdir
 set backspace=indent,eol,start
 set nostartofline
 set ignorecase
