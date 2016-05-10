@@ -160,6 +160,9 @@ imap <C-S-Tab> <Esc>:tabp<CR>
 " quickly turn of highlighting
 map <C-H> :noh<CR>
 
+" locally change to directory of current file
+command Cd lcd %:p:h
+
 " dvorak
 "noremap h h
 "noremap H H
