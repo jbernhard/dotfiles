@@ -5,19 +5,15 @@
 " plugins
 call plug#begin('~/.vim/plugged')
 
-Plug 'taglist.vim'
+Plug 'altercation/vim-colors-solarized'
 Plug 'Valloric/YouCompleteMe'
 Plug 'Valloric/ListToggle'
 Plug 'tpope/vim-fugitive'
-Plug 'tpope/vim-surround'
-Plug 'altercation/vim-colors-solarized'
 Plug 'mattn/webapi-vim'
 Plug 'mattn/gist-vim'
 Plug 'nvie/vim-flake8'
 Plug 'hynek/vim-python-pep8-indent'
 Plug 'scrooloose/nerdcommenter'
-Plug 'a.vim'
-Plug 'vhdirk/vim-cmake'
 Plug 'PotatoesMaster/i3-vim-syntax'
 Plug 'ntpeters/vim-better-whitespace'
 Plug 'mitsuhiko/vim-jinja'
