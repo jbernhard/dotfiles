@@ -2,42 +2,30 @@
 " ~/.vimrc
 "
 
+" plugins
+call plug#begin('~/.vim/plugged')
 
-" iMproved
-set nocompatible
+Plug 'taglist.vim'
+Plug 'Valloric/YouCompleteMe'
+Plug 'Valloric/ListToggle'
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-surround'
+Plug 'altercation/vim-colors-solarized'
+Plug 'mattn/webapi-vim'
+Plug 'mattn/gist-vim'
+Plug 'nvie/vim-flake8'
+Plug 'hynek/vim-python-pep8-indent'
+Plug 'scrooloose/nerdcommenter'
+Plug 'a.vim'
+Plug 'vhdirk/vim-cmake'
+Plug 'PotatoesMaster/i3-vim-syntax'
+Plug 'ntpeters/vim-better-whitespace'
+Plug 'mitsuhiko/vim-jinja'
+Plug 'mattn/emmet-vim'
 
-" vundle
-filetype off
-
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-
-Plugin 'VundleVim/Vundle.vim'
-Plugin 'taglist.vim'
-Plugin 'Valloric/YouCompleteMe'
-Plugin 'Valloric/ListToggle'
-Plugin 'tpope/vim-fugitive'
-Plugin 'tpope/vim-surround'
-Plugin 'altercation/vim-colors-solarized'
-Plugin 'mattn/webapi-vim'
-Plugin 'mattn/gist-vim'
-Plugin 'nvie/vim-flake8'
-Plugin 'hynek/vim-python-pep8-indent'
-Plugin 'scrooloose/nerdcommenter'
-Plugin 'a.vim'
-Plugin 'vhdirk/vim-cmake'
-Plugin 'PotatoesMaster/i3-vim-syntax'
-Plugin 'ntpeters/vim-better-whitespace'
-Plugin 'mitsuhiko/vim-jinja'
-Plugin 'mattn/emmet-vim'
-
-call vundle#end()
-
+call plug#end()
 
 " general
-filetype plugin indent on
-syntax on
-
 set number
 set textwidth=80
 set tabstop=2
