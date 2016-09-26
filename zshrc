@@ -348,3 +348,10 @@ function bf () {awk '/btrfs/ {print $2}' /proc/mounts | while read mnt; do echo 
 # local settings
 # loaded last to enable overrides
 [[ -r ~/.zshrc.local ]] && source ~/.zshrc.local || true
+
+# plugins
+source ~/.zplug/init.zsh
+zplug "zplug/zplug"
+zplug "zsh-users/zsh-completions"
+zplug "zsh-users/zsh-syntax-highlighting", nice:10
+zplug load
