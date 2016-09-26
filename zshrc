@@ -2,7 +2,6 @@
 # ~/.zshrc
 #
 
-
 # path
 typeset -U path
 path=(~/bin ~/.local/bin $(ruby -rubygems -e "puts Gem.user_dir")/bin $(npm get prefix)/bin $path)
@@ -34,85 +33,73 @@ eval `dircolors ~/.dircolors`
 # disable flow control
 stty stop undef
 
-# disable beep
-#setterm -blength 0
-
-# zsh options
-setopt nobeep
-setopt autocd
-setopt dvorak
-setopt correct
-setopt automenu
-setopt autolist
+# misc options
+unsetopt beep
+setopt auto_cd
 setopt glob
-setopt extendedglob
-setopt noautoremoveslash
-setopt noalwaystoend
-setopt autoparamslash
-setopt completeinword
-setopt noflowcontrol
-unsetopt cdablevars
+setopt extended_glob
+setopt correct
+setopt dvorak
+
+# useful modules
+autoload -U zcalc zargs zmv
 
 # print timing info for commands that run for longer than this number of seconds
-REPORTTIME=7
-
-# history
-HISTFILE=~/.zsh_history
-HISTSIZE=2000
-SAVEHIST=2000
+REPORTTIME=10
 
 # default command for a single input redirection
-lessxf () {
-  less -XF $@
-}
+lessxf () { less -XF $@ }
 READNULLCMD=lessxf
 
-# zle modules
-autoload -U zcalc zargs zmv
+
+# history
+
+# oh-my-zsh settings
+HISTFILE=~/.zsh_history
+HISTSIZE=10000
+SAVEHIST=10000
+
+setopt append_history
+setopt extended_history
+setopt hist_expire_dups_first
+setopt hist_ignore_dups
+setopt hist_ignore_space
+setopt hist_verify
+setopt inc_append_history
+setopt share_history
+
 
 # completion
 zmodload zsh/complist
 autoload -U compinit
-compinit
-zstyle :compinstall filename "${HOME}/.zshrc"
 
-#zstyle ':completion:*' force-list always
-#zstyle ':completion:*' menu yes select
+unsetopt menu_complete
+unsetopt flow_control
+setopt auto_menu
+setopt complete_in_word
+setopt always_to_end
 
 zstyle ':completion:*' use-cache on
-zstyle ':completion:*' cache-path ~/.zsh_cache
-
-zstyle ':completion:*' completer _complete _match _approximate   # approximate matching
+# approximate
+zstyle ':completion:*' completer _complete _match _approximate
 zstyle ':completion:*:match:*' original only
 zstyle ':completion:*:approximate:*' max-errors 1 numeric
-
 zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
+# some lines from oh-my-zsh
+zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}' 'r:|=*' 'l:|=* r:|=*'
+zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([0-9]#) ([0-9a-z-]#)*=01;34=0=01'
+zstyle ':completion:*:*:*:*:processes' command "ps -u $USER -o pid,user,comm -w -w"
+zstyle ':completion:*:cd:*' tag-order local-directories directory-stack path-directories
 
-#zstyle ':completion:*:*:vim:*' file-patterns '*.(sh|zsh|py|tex|lua|conf|service):text-files' '%p:all-files'
-#zstyle ':completion:*:*:gvim:*' file-patterns '*.(sh|zsh|py|tex|lua|conf|service):text-files' '%p:all-files'
-
-#zstyle ':completion:*:*:kill:*' menu yes select   # completion for kill PIDS
-#zstyle ':completion:*:kill:*'   force-list always
-
-#zstyle ':completion:*:*:killall:*' menu yes select   # and killall process names
-#zstyle ':completion:*:killall:*'   force-list always
-zstyle ':completion:*:killall:*' command 'ps -u $USER -o cmd | tail -n +2'
-
-zstyle ':completion:*:cd:*' ignore-parents parent pwd   # ignore parent dir for cd completion
-
-[[ -f ~/.travis/travis.sh ]] && . ~/.travis/travis.sh
+compinit
 
 
-#
 # prompt
-#
 
 autoload -U colors && colors
 setopt prompt_subst
 
-#
 # left main prompt
-#
 
 # set color of username: root or normal user
 if [[ $UID == 0 ]]; then
@@ -136,10 +123,7 @@ accent_color=$fg[green]
 
 PROMPT="%{$user_color%}%n%{$sep_color%}@%{$host_color%}%m%{$sep_color%}:%{$path_color%}%~ %(?..%{$ret_color%}%? )%{$accent_color%}> %{$reset_color%}"
 
-
-#
 # right git prompt
-#
 
 # color and symbol settings
 GIT_PROMPT_AHEAD="%{$fg[red]%}+"
@@ -190,24 +174,7 @@ _git_prompt () {
 RPROMPT='$(_git_prompt)'
 
 
-# screen hardstatus title
-#if [[ "$TERM" == "screen-256color" || "$TERM" == "screen" ]]; then
-#  preexec () {
-#    if [[ $PWD == $HOME ]]; then
-#      dir="~"
-#    else
-#      dir=${PWD##*/}
-#    fi
-#    echo -ne "\ek${dir}:${1%% *}\e\\"
-#  }
-#fi
-
-
-
-
-#
 # keyboard
-#
 
 # vi mode
 bindkey -v
@@ -239,10 +206,7 @@ bindkey -sM vicmd '\-' '\$'
 bindkey -sM vicmd '_' '\^'
 
 
-
-#
 # aliases
-#
 
 # customized commands
 alias ls="ls -ph --color=always --group-directories-first"
@@ -306,7 +270,6 @@ alias update-grub="sudo grub-mkconfig -o /boot/grub/grub.cfg"
 alias c='clear'
 alias g="hub"
 alias q="exit"
-alias s="screen"
 
 # etc
 alias sx="startx"
@@ -317,13 +280,7 @@ alias k1="killall -1"
 alias k9="killall -9"
 alias soff="sleep 0.1 && xset dpms force off"
 alias son="xset -dpms"
-alias exf="exfalso . &> /dev/null &"
-alias gv="gwenview . &> /dev/null &"
-alias konq="konqueror . &> /dev/null &"
-alias proxy="ssh -Nfq proxy"
-alias ethip="sudo dhcpcd -n eth0"
 alias extip="curl -s http://ipecho.net/plain"
-#alias nexdef="java -Xmx512m -jar $HOME/etc/mlbtv/nexdef.jar &> /dev/null &"
 alias mlb="mlbviewer"
 alias mounts="column -t /proc/mounts"
 alias fehh="feh -FZY"
@@ -336,7 +293,6 @@ alias g++o="g++ -std=c++11 -O3 -DNDEBUG -march=native -Wall -Wextra -Wpedantic"
 alias g++d="g++ -std=c++11 -Og -g -march=native -Wall -Wextra -Wpedantic"
 alias cmakerel="cmake -DCMAKE_BUILD_TYPE=Release"
 alias cmakedeb="cmake -DCMAKE_BUILD_TYPE=Debug"
-alias cpplint="cpplint --extensions=cxx,h --linelength=110"
 
 function ok () { okular $@ &> /dev/null & }
 function za () { zathura $@ &> /dev/null & }
@@ -345,11 +301,8 @@ function nose_cov () { nose --with-cov --cov-report term-missing --cov=$1 }
 function bf () {awk '/btrfs/ {print $2}' /proc/mounts | while read mnt; do echo $mnt; btrfs filesystem df $@ $mnt; echo; done}
 
 
-# local settings
-# loaded last to enable overrides
-[[ -r ~/.zshrc.local ]] && source ~/.zshrc.local || true
-
 # plugins
+
 source ~/.zplug/init.zsh
 zplug "zplug/zplug"
 zplug "zsh-users/zsh-completions"
