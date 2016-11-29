@@ -16,9 +16,6 @@ export MAKEFLAGS="-j$(nproc)"
 # default less options
 export LESS='-R -i'
 
-# use gtk theme in qt
-export QT_STYLE_OVERRIDE=GTK+
-
 # colored man pages
 export LESS_TERMCAP_md=$'\E[34m'        # section headers, etc - blue
 export LESS_TERMCAP_us=$'\E[36m'        # emphasized words - cyan
