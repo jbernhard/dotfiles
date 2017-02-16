@@ -37,7 +37,6 @@ case $(</etc/hostname) in
   ice9)
     xset dpms 180
     redshift &> /dev/null &
-    touchpad on
   ;;
 
   serenity)
