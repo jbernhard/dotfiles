@@ -8,7 +8,7 @@
   <alias>
     <family>serif</family>
     <prefer>
-      <family>Heuristica</family>
+      <family>Noto Serif</family>
     </prefer>
   </alias>
 
@@ -22,7 +22,7 @@
   <alias>
     <family>monospace</family>
     <prefer>
-      <family>Inconsolatazi4</family>
+      <family>Inconsolata</family>
     </prefer>
   </alias>
 
