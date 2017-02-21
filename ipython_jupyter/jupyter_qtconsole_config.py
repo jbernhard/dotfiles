@@ -2,6 +2,8 @@
 # ~/.jupyter/jupyter_qtconsole_config.py
 #
 
+c.ConsoleWidget.font_size = 13
+
 color_theme = 'solarizedlight'
 
 import pkg_resources
