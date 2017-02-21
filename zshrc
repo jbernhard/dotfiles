@@ -24,6 +24,9 @@ export LESS_TERMCAP_me=$'\E[0m'         # reset
 export LESS_TERMCAP_ue=$'\E[0m'
 export LESS_TERMCAP_se=$'\E[0m'
 
+# use GTK style for KDE/Qt apps (install qt5-styleplugins)
+export QT_QPA_PLATFORMTHEME=gtk2
+
 # ls colors
 eval `dircolors ~/.dircolors`
 
