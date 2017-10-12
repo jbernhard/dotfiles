@@ -42,7 +42,7 @@ set backspace=indent,eol,start
 set nostartofline
 set ignorecase
 set smartcase
-set ttymouse=xterm2
+set ttymouse=urxvt
 set mouse=a
 set ttimeout
 set ttimeoutlen=100
@@ -144,10 +144,10 @@ map <Leader>t :TlistToggle<CR>
 cmap W<CR> w<CR>
 
 " tabs
-map <C-Tab> :tabn<CR>
-map <C-S-Tab> :tabp<CR>
-imap <C-Tab> <Esc>:tabn<CR>
-imap <C-S-Tab> <Esc>:tabp<CR>
+map <C-Tab> :tabnext<CR>
+map <C-S-Tab> :tabprevious<CR>
+map <A-h> :tabmove -<CR>
+map <A-s> :tabmove +<CR>
 
 " quickly turn of highlighting
 map <C-H> :noh<CR>
