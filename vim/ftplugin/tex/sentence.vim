@@ -20,3 +20,6 @@ noremap <buffer> - g$
 noremap <buffer> D dg$
 noremap <buffer> C cg$
 noremap <buffer> Y yg$
+
+" disable ycm auto popup and semantic triggers
+let g:ycm_auto_trigger = 0

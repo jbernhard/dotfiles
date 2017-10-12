@@ -1,5 +1,0 @@
-call IMAP('`e', '\epsilon', 'tex')
-call IMAP('`w', '\omega', 'tex')
-call IMAP('`t', '\theta', 'tex')
-call IMAP('`p', '\psi', 'tex')
-call IMAP('`P', '\Psi', 'tex')

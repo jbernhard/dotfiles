@@ -18,6 +18,9 @@ Plug 'PotatoesMaster/i3-vim-syntax'
 Plug 'ntpeters/vim-better-whitespace'
 Plug 'mitsuhiko/vim-jinja'
 Plug 'mattn/emmet-vim'
+Plug 'lervag/vimtex'
+Plug 'SirVer/ultisnips'
+Plug 'honza/vim-snippets'
 
 call plug#end()
 
@@ -93,10 +96,15 @@ autocmd BufNewFile,BufReadPost *.md set filetype=markdown
 " youcompleteme settings
 let g:ycm_global_ycm_extra_conf = '~/.vim/ycm_extra_conf.py'
 let g:ycm_always_populate_location_list = 1
-let g:ycm_filetype_blacklist = {'markdown': 1, 'tex': 1, 'text': 1}
 let g:ycm_autoclose_preview_window_after_insertion = 1
 
-" ensure latex-suite is loaded
+" change default UltiSnips trigger keys for compatibility with ycm
+let g:UltiSnipsExpandTrigger = "<C-Enter>"
+let g:UltiSnipsListSnippets = "<C-S-Enter>"
+let g:UltiSnipsJumpForwardTrigger = "<C-Space>"
+let g:UltiSnipsJumpBackwardTrigger = "<C-S-Space>"
+
+" prevent vim from detecting some tex files as 'plaintex'
 let g:tex_flavor='latex'
 
 " gist settings
