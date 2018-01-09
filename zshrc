@@ -4,7 +4,7 @@
 
 # path
 typeset -U path
-path=(~/bin ~/.local/bin $(ruby -rubygems -e "puts Gem.user_dir")/bin $(npm get prefix)/bin $path)
+path=(~/bin ~/.local/bin $(ruby -e 'puts Gem.user_dir')/bin $(npm get prefix)/bin $path)
 
 # default programs
 export EDITOR=vim
