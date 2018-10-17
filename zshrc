@@ -6,6 +6,10 @@
 typeset -U path
 path=(~/bin ~/.local/bin $(ruby -e 'puts Gem.user_dir')/bin $(npm get prefix)/bin $path)
 
+# function search path
+typeset -U fpath
+fpath=(~/.local/share/zsh/site-functions $fpath)
+
 # default programs
 export EDITOR=vim
 export BROWSER=chromium
@@ -24,11 +28,8 @@ export LESS_TERMCAP_me=$'\E[0m'         # reset
 export LESS_TERMCAP_ue=$'\E[0m'
 export LESS_TERMCAP_se=$'\E[0m'
 
-# use GTK style for KDE/Qt apps (install qt5-styleplugins)
-export QT_QPA_PLATFORMTHEME=gtk2
-
 # ls colors
-eval `dircolors ~/.dircolors`
+eval $(dircolors ~/.dircolors)
 
 # disable flow control
 stty stop undef
@@ -70,7 +71,7 @@ setopt inc_append_history
 
 # completion
 zmodload zsh/complist
-autoload -U compinit
+autoload -Uz compinit
 
 unsetopt menu_complete
 unsetopt flow_control
@@ -78,6 +79,7 @@ setopt auto_menu
 setopt complete_in_word
 setopt always_to_end
 
+zstyle ':completion:*' menu select
 zstyle ':completion:*' use-cache on
 # approximate
 zstyle ':completion:*' completer _complete _match _approximate
