@@ -1,9 +1,0 @@
-#
-# ~/.unison/common
-#
-
-# default settings for all profiles
-auto = true
-contactquietly = true
-confirmbigdel = true
-logfile = /home/jonah/.unison/unison.log

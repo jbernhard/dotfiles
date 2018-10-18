@@ -1,9 +1,0 @@
-[Unit]
-Description=clear old files
-
-[Service]
-Type=oneshot
-ExecStart=/usr/bin/find %h/.vim/view %h/.kde4/share/apps/okular/docdata -type f -mtime +15 -delete
-
-[Install]
-WantedBy=timer-daily.target

@@ -1,9 +1,0 @@
-[Unit]
-Description=medialist update
-
-[Service]
-Type=oneshot
-ExecStart=/home/jonah/doc/medialist/update
-
-[Install]
-WantedBy=timer-daily.target
