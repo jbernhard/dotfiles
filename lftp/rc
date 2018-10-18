@@ -1,5 +1,5 @@
 #
-# ~/.lftp/rc
+# ~/.config/lftp/rc
 #
 
 # aliases
@@ -24,8 +24,8 @@ set ftp:ssl-protect-fxp yes
 # use ssl for file list transfers
 set ftp:ssl-protect-list yes
 
-# don't verify ssl certificates
-set ssl:verify-certificate no
+# verify ssl certificates
+set ssl:verify-certificate yes
 
 # don't log or save history
 set cmd:save-cwd-history no
