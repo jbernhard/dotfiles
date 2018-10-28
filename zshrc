@@ -226,8 +226,6 @@ alias -g gg="| grep"
 alias -g nn="| wc -l"
 alias -g hh="| head"
 alias -g tt="| tail"
-alias -g ss="| cut -c 1-150"
-alias -g cols="| column -t"
 
 # files
 alias -g zrc="~/.zshrc"
@@ -282,23 +280,15 @@ alias k9="killall -9"
 alias soff="sleep 0.1 && xset dpms force off"
 alias son="xset -dpms"
 alias extip="curl -s http://ipecho.net/plain"
-alias mlb="mlbviewer"
 alias mounts="column -t /proc/mounts"
 alias fehh="feh -FZY"
 alias py="python"
 alias ipy="ipython"
 alias nose="nosetests --verbose"
-alias g++11="g++ -std=c++11"
-alias g++o="g++ -std=c++11 -O3 -DNDEBUG -march=native -Wall -Wextra -Wpedantic"
-alias g++d="g++ -std=c++11 -Og -g -march=native -Wall -Wextra -Wpedantic"
 alias cmakerel="cmake -DCMAKE_BUILD_TYPE=Release"
 alias cmakedeb="cmake -DCMAKE_BUILD_TYPE=Debug"
 
 function ok () { okular $@ &> /dev/null & }
-function za () { zathura $@ &> /dev/null & }
-function nose_cover () { nose --with-coverage --cover-erase --cover-package=$1 }
-function nose_cov () { nose --with-cov --cov-report term-missing --cov=$1 }
-function bf () {awk '/btrfs/ {print $2}' /proc/mounts | while read mnt; do echo $mnt; btrfs filesystem df $@ $mnt; echo; done}
 
 
 # plugins
