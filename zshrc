@@ -287,6 +287,7 @@ alias ipy="ipython"
 alias nose="nosetests --verbose"
 alias cmakerel="cmake -DCMAKE_BUILD_TYPE=Release"
 alias cmakedeb="cmake -DCMAKE_BUILD_TYPE=Debug"
+alias redshift-toggle="killall -SIGUSR1 redshift"
 
 function ok () { okular $@ &> /dev/null & }
 
