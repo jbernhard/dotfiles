@@ -15,10 +15,6 @@ xset r rate 375 30 mouse 5/3 0 b off s off
 # Xresources
 xrdb -merge ~/.Xresources
 
-# urxvt daemon
-export RXVT_SOCKET=$XDG_RUNTIME_DIR/urxvtd
-urxvtd --quiet --fork --opendisplay
-
 # hide idle cursor
 unclutter -idle 4 -jitter 1 -root &
 

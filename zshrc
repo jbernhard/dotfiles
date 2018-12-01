@@ -52,6 +52,9 @@ REPORTTIME=10
 lessxf () { less -XF $@ }
 READNULLCMD=lessxf
 
+# enable termite opening new terminals in the current directory
+[[ $TERM == xterm-termite ]] && source /etc/profile.d/vte.sh
+
 
 # history
 
