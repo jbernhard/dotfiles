@@ -15,5 +15,4 @@ setlocal foldmethod=indent
 setlocal foldlevel=99
 
 " run shortcut
-"noremap <buffer> <F12> :w<CR>:!./'%'<CR>
 setlocal makeprg=./%

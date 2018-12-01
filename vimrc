@@ -25,15 +25,12 @@ endif
 " plugins
 call plug#begin('~/.vim/plugged')
 
-Plug 'altercation/vim-colors-solarized'
+Plug 'icymind/NeoSolarized'
 Plug 'Valloric/YouCompleteMe'
-Plug 'Valloric/ListToggle'
 Plug 'tpope/vim-fugitive'
-Plug 'mattn/webapi-vim'
-Plug 'mattn/gist-vim'
+Plug 'airblade/vim-gitgutter'
 Plug 'nvie/vim-flake8'
 Plug 'hynek/vim-python-pep8-indent'
-Plug 'scrooloose/nerdcommenter'
 Plug 'PotatoesMaster/i3-vim-syntax'
 Plug 'ntpeters/vim-better-whitespace'
 Plug 'mitsuhiko/vim-jinja'
@@ -45,6 +42,7 @@ Plug 'honza/vim-snippets'
 call plug#end()
 
 " general
+set termguicolors
 set number
 set textwidth=80
 set tabstop=2
@@ -62,13 +60,12 @@ set backspace=indent,eol,start
 set nostartofline
 set ignorecase
 set smartcase
-set ttymouse=urxvt
 set mouse=a
 set ttimeout
 set ttimeoutlen=100
-set scrolloff=1
+set scrolloff=3
 set sidescrolloff=5
-"set completeopt=longest,menuone
+set updatetime=100
 
 " prefer vertical split
 set splitright
@@ -77,18 +74,29 @@ set splitbelow
 " extended matching
 runtime! macros/matchit.vim
 
-" solarized dark colors
-colorscheme solarized
+" solarized colors
+let g:neosolarized_bold = 1
+let g:neosolarized_underline = 1
+let g:neosolarized_italic = 1
+colorscheme NeoSolarized
 set background=dark
 
-" gui/terminal-specific
+" link tab bar highlighting to main window
+highlight! link TabLineFill Normal
+
+" match gitgutter bg color to line number column
+let s:guibg = synIDattr(hlID('LineNr'), 'bg', 'gui')
+let s:ctermbg = synIDattr(hlID('LineNr'), 'bg', 'cterm')
+
+for group in ['Add', 'Change', 'Delete', 'ChangeDelete']
+  execute 'highlight GitGutter' . group . ' guibg=' . s:guibg . ' ctermbg=' . s:ctermbg
+endfor
+
+" gui options
 if has('gui_running')
   set guifont=monospace\ 13
 
-  " shortcut to toggle light/dark solarized
-  call togglebg#map("<F4>")
-
-  " remove gui clutter
+  " remove clutter
   set guioptions-=m   " menubar
   set guioptions-=T   " toolbar
   set guioptions-=r   " right scrollbar
@@ -101,38 +109,33 @@ if has('gui_running')
   set winaltkeys=no
 endif
 
-" save views automatically
-" enable clear-old-files.service systemd user service to automatically clean old view files
-autocmd BufWinLeave * if expand('%') != '' && expand('%') !~ '^fugitive' && &ft != 'gitcommit' | mkview | endif
-autocmd BufWinEnter * if expand('%') != '' && expand('%') !~ '^fugitive' && &ft != 'gitcommit' | loadview | endif
+" save and load views automatically for appropriate files
+" (systemd-tmpfiles is configured to clean old view files)
+function UseView()
+  let l:fname = expand('%:p')
+  return &modifiable
+        \ && filewritable(l:fname)
+        \ && &buftype == ''
+        \ && !&l:diff
+        \ && &filetype != 'gitcommit'
+        \ && l:fname !~ '^\(fugitive://\|/run\|/tmp\)'
+endfunction
 
-" markdown file extension
-autocmd BufNewFile,BufReadPost *.md set filetype=markdown
+autocmd BufWinLeave * if UseView() | mkview | endif
+autocmd BufWinEnter * if UseView() | silent! loadview | endif
 
 " youcompleteme settings
-let g:ycm_global_ycm_extra_conf = '~/.vim/ycm_extra_conf.py'
 let g:ycm_always_populate_location_list = 1
 let g:ycm_autoclose_preview_window_after_insertion = 1
 
 " change default UltiSnips trigger keys for compatibility with ycm
-let g:UltiSnipsExpandTrigger = "<C-Enter>"
-let g:UltiSnipsListSnippets = "<C-S-Enter>"
-let g:UltiSnipsJumpForwardTrigger = "<C-Space>"
-let g:UltiSnipsJumpBackwardTrigger = "<C-S-Space>"
+let g:UltiSnipsExpandTrigger = "<C-s>"
+let g:UltiSnipsListSnippets = "<C-l>"
+let g:UltiSnipsJumpForwardTrigger = "<C-t>"
+let g:UltiSnipsJumpBackwardTrigger = "<C-n>"
 
-" prevent vim from detecting some tex files as 'plaintex'
+" prevent detecting some tex files as 'plaintex'
 let g:tex_flavor='latex'
-
-" gist settings
-let g:gist_clip_command = 'xsel --clipboard'
-let g:gist_detect_filetype = 1
-let g:gist_open_browser_after_post = 1
-let g:gist_show_privates = 1
-let g:gist_post_private = 1
-let g:gist_update_on_write = 2
-
-" nerd commenter
-let g:NERDSpaceDelims = 1
 
 " whitespace
 let g:better_whitespace_filetypes_blacklist = ['gitcommit']
@@ -148,25 +151,22 @@ let mapleader = ","
 map Y y$
 
 " spellcheck toggle
-map <F11> :setlocal spell! spelllang=en_us<CR>
+map <F9> :setlocal spell! spelllang=en_us<CR>
 
 " make shortcut
 map <Leader>m :update<CR>:make<CR>
-
-" taglist
-map <Leader>t :TlistToggle<CR>
 
 " :W = :w
 cmap W<CR> w<CR>
 
 " tabs
-map <C-Tab> :tabnext<CR>
-map <C-S-Tab> :tabprevious<CR>
-map <A-h> :tabmove -<CR>
-map <A-s> :tabmove +<CR>
+map <A-h> :tabprevious<CR>
+map <A-s> :tabnext<CR>
+map <A-t> :tabmove -<CR>
+map <A-n> :tabmove +<CR>
 
 " quickly turn of highlighting
-map <C-H> :noh<CR>
+map <C-h> :nohlsearch<CR>
 
 " locally change to directory of current file
 command Cd lcd %:p:h
