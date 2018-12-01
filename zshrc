@@ -258,7 +258,7 @@ alias rcpd="rsync -avhP --delete-after"
 
 # sysadmin
 alias -g p="pacman"
-alias -g pa="pacaur"
+alias pa="pacaur"
 alias syu="pacaur -Syu"
 alias -g sc="systemctl"
 alias sd="systemctl poweroff"
@@ -269,14 +269,14 @@ alias update-mirrorlist="sudo reflector --country 'United States' --protocol htt
 alias update-grub="sudo grub-mkconfig -o /boot/grub/grub.cfg"
 
 # single letter commands
-alias c='clear'
+alias c="clear"
 alias -g v="nvim"
 alias g="hub"
 alias q="exit"
 
 # etc
 alias sx="startx"
-alias cdc='cd && clear'
+alias cdc="cd && clear"
 alias cleantmp="rm -rfv $HOME/tmp/*"
 alias rld="source ~/.zshrc"
 alias k1="killall -1"
