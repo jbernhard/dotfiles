@@ -2,6 +2,26 @@
 " ~/.vimrc
 "
 
+" neo/vim specific
+if has('nvim')
+  " make nvim use ~/.vim
+  set runtimepath^=~/.vim runtimepath+=~/.vim/after
+  let &packpath = &runtimepath
+else
+  " change terminal cursor shape depending on mode
+  let &t_SI = "\e[6 q"
+  let &t_SR = "\e[4 q"
+  let &t_EI = "\e[2 q"
+
+  " terminal undercurl
+  let &t_Cs = "\e[4:3m"
+  let &t_Ce = "\e[4:0m"
+
+  " put all swap files in a central location
+  set directory^=$HOME/.vim/tmp//
+  set backupdir^=$HOME/.vim/tmp//
+endif
+
 " plugins
 call plug#begin('~/.vim/plugged')
 
@@ -34,7 +54,7 @@ set expandtab
 set cindent
 set smarttab
 set showtabline=2
-set viminfo='100,f1
+set laststatus=1
 set hlsearch
 set incsearch
 set wildmode=list:longest,full
@@ -53,10 +73,6 @@ set sidescrolloff=5
 " prefer vertical split
 set splitright
 set splitbelow
-
-" put all swap files in a central location
-set directory^=$HOME/.vim/tmp//
-set backupdir^=$HOME/.vim/tmp//
 
 " extended matching
 runtime! macros/matchit.vim

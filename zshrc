@@ -11,7 +11,7 @@ typeset -U fpath
 fpath=(~/.local/share/zsh/site-functions $fpath)
 
 # default programs
-export EDITOR=vim
+export EDITOR=nvim
 export BROWSER=chromium
 
 # default parallel make
@@ -270,6 +270,7 @@ alias update-grub="sudo grub-mkconfig -o /boot/grub/grub.cfg"
 
 # single letter commands
 alias c='clear'
+alias -g v="nvim"
 alias g="hub"
 alias q="exit"
 

@@ -6,9 +6,9 @@
 	name = Jonah Bernhard
 	email = jonah.bernhard@gmail.com
 [core]
-	editor = vim
+	editor = nvim
 [merge]
-	tool = gvimdiff
+	tool = nvim -d
 [color]
 	ui = true
 [alias]
