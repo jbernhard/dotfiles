@@ -26,18 +26,21 @@ endif
 call plug#begin('~/.vim/plugged')
 
 Plug 'icymind/NeoSolarized'
-Plug 'Valloric/YouCompleteMe'
 Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
-Plug 'nvie/vim-flake8'
-Plug 'hynek/vim-python-pep8-indent'
 Plug 'PotatoesMaster/i3-vim-syntax'
 Plug 'ntpeters/vim-better-whitespace'
-Plug 'mitsuhiko/vim-jinja'
-Plug 'mattn/emmet-vim'
-Plug 'lervag/vimtex'
-Plug 'SirVer/ultisnips'
-Plug 'honza/vim-snippets'
+
+if hostname() !=# 'serenity'
+  Plug 'Valloric/YouCompleteMe'
+  Plug 'nvie/vim-flake8'
+  Plug 'hynek/vim-python-pep8-indent'
+  Plug 'mitsuhiko/vim-jinja'
+  Plug 'mattn/emmet-vim'
+  Plug 'lervag/vimtex'
+  Plug 'SirVer/ultisnips'
+  Plug 'honza/vim-snippets'
+endif
 
 call plug#end()
 
