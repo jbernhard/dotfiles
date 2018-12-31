@@ -33,13 +33,14 @@ Plug 'ntpeters/vim-better-whitespace'
 
 if hostname() !=# 'serenity'
   Plug 'Valloric/YouCompleteMe'
+  Plug 'SirVer/ultisnips'
+  Plug 'honza/vim-snippets'
   Plug 'nvie/vim-flake8'
   Plug 'hynek/vim-python-pep8-indent'
   Plug 'mitsuhiko/vim-jinja'
   Plug 'mattn/emmet-vim'
   Plug 'lervag/vimtex'
-  Plug 'SirVer/ultisnips'
-  Plug 'honza/vim-snippets'
+  Plug 'plasticboy/vim-markdown'
 endif
 
 call plug#end()
