@@ -213,7 +213,7 @@ bindkey -sM vicmd '_' '\^'
 # aliases
 
 # customized commands
-alias ls="ls -ph --color=always --group-directories-first"
+alias ls="ls -ph --color=auto --group-directories-first"
 alias top="top -d 1 -H"
 alias ps="ps -e"
 alias grep="grep --color=auto"
