@@ -258,6 +258,7 @@ alias rcpd="rsync -avhP --delete-after"
 
 # sysadmin
 alias -g p="pacman"
+alias sysup="sudo pacman -Syu && aur-sync && sudo pacdiff && pacclean && zplug update && termite -e \"nvim -c 'PlugUpdate | PlugUpgrade'\" &> /dev/null &"
 alias -g sc="systemctl"
 alias sd="systemctl poweroff"
 alias rb="systemctl reboot"
